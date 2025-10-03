@@ -1,0 +1,19 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="128" y2="128" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFC76B"/><stop offset="1" stop-color="#FF9A3E"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Phone -->
+  <rect x="36" y="16" width="56" height="96" rx="10" stroke="url(#g)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="64" cy="26" r="3" fill="url(#g)"/>
+  <rect x="44" y="34" width="40" height="60" rx="6" stroke="url(#g)" stroke-width="3.5"/>
+
+  <!-- Code chevrons -->
+  <path d="M57 62l-9 7 9 7" stroke="url(#g)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M71 62l9 7-9 7" stroke="url(#g)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Tap dot -->
+  <circle cx="64" cy="98" r="3.2" fill="url(#g)"/>
+</svg>

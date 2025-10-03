@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="docTitle">Hussein Zayat — Backend Consultant & Technical Lead</title>
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./assets/images/app-logo.svg" type="image/x-icon">
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- #MAIN -->
+  <main>
+
+    <!-- #SIDEBAR -->
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <div class="avatar-box">
+          <img src="./assets/images/me.jpg" class="profile-pic" alt="Hussein Zayat">
+        </div>
+
+        <div class="info-content">
+          <h1 class="name" title="Hussein Zayat">Hussein Zayat</h1>
+          <p class="title" data-i18n="sidebar.role">
+            Backend Consultant <br> & Technical Lead (.NET • Azure)
+          </p>
+        </div>
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+          <li class="contact-item">
+            <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
+            <div class="contact-info">
+              <p class="contact-title" data-i18n="sidebar.email">Email</p>
+              <a href="mailto:husseinzayat10@hotmail.com" class="contact-link">husseinzayat10@hotmail.com</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box"><ion-icon name="phone-portrait-outline"></ion-icon></div>
+            <div class="contact-info">
+              <p class="contact-title" data-i18n="sidebar.phone">Phone</p>
+              <a href="tel:+393479992231" class="contact-link">+39 347 999 2231</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
+            <div class="contact-info">
+              <p class="contact-title" data-i18n="sidebar.location">Location</p>
+              <address data-i18n="sidebar.locationValue">Turin, Italy</address>
+            </div>
+          </li>
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/hussein-zayat-6730b6161" class="social-link" target="_blank" rel="noopener">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://github.com/husseinzayat3" class="social-link" target="_blank" rel="noopener">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- #main-content -->
+    <div class="main-content">
+
+      <!-- #NAVBAR -->
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <button class="navbar-link active" data-nav-link data-nav-target="about" data-i18n="nav.about">About</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link data-nav-target="resume" data-i18n="nav.resume">Resume</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link data-nav-target="contact" data-i18n="nav.contact">Contact</button>
+          </li>
+
+          <!-- Theme toggle -->
+          <button id="theme-toggle" class="navbar-link" aria-label="Toggle theme">
+            <ion-icon id="theme-icon" name="moon-outline"></ionicon>
+          </button>
+
+          <!-- Language toggle -->
+          <button id="lang-toggle" class="navbar-link" aria-label="Toggle language">
+            <ion-icon name="globe-outline"></ion-icon>
+            <span id="lang-toggle-text">IT</span>
+          </button>
+        </ul>
+      </nav>
+
+      <!-- #ABOUT -->
+      <article class="about active" data-page="about">
+        <header>
+          <h2 class="h2 article-title" data-i18n="about.title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p data-i18n="about.p1">
+            Senior backend consultant and technical leader specialized in <strong>.NET 7/8/9</strong>,
+            <strong>Azure</strong>, and <strong>microservices</strong>. I help teams build scalable APIs, modernize
+            legacy systems, and ship with confidence using automated CI/CD pipelines.
+          </p>
+          <p data-i18n="about.p2">
+            Recent work includes consulting for <strong>CNH Industrial &amp; Iveco</strong> (Azure, microservices,
+            SQL/Cosmos DB) and <strong>HEABC</strong> in Canada (backend modernization and <strong>DocuSign</strong>
+            integration). I’m available for long-term freelance collaborations (remote-first).
+          </p>
+        </section>
+
+        <!-- services -->
+        <section class="service">
+          <h3 class="h3 service-title" data-i18n="services.title">What i'm doing</h3>
+          <ul class="service-list">
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-cloud-dev.svg" alt="cloud icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title" data-i18n="services.cloud.title">Cloud Solutions</h4>
+                <p class="service-item-text" data-i18n="services.cloud.text">
+                  Helping businesses move to the cloud with confidence—designing secure, scalable, and future-ready cloud solutions.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-web-dev.svg" alt="web icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title" data-i18n="services.web.title">Web development</h4>
+                <p class="service-item-text" data-i18n="services.web.text">
+                  Modern and scalable web applications built with high-quality code and design at a professional level.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-mobile-dev.svg" alt="mobile icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title" data-i18n="services.mobile.title">Mobile apps</h4>
+                <p class="service-item-text" data-i18n="services.mobile.text">
+                  Native and cross-platform mobile solutions that bring your ideas to life on any device.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-team-lead.svg" alt="leadership icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title" data-i18n="services.lead.title">Technical Leadership (Tech Lead / Team Lead)</h4>
+                <p class="service-item-text" data-i18n="services.lead.text">
+                  Mentoring & code reviews, architectural guidance, sprint planning, delivery governance, and stakeholder alignment to keep teams fast and focused.
+                </p>
+              </div>
+            </li>
+
+          </ul>
+        </section>
+
+        <!-- clients -->
+        <section class="clients clients--grid">
+          <h3 class="h3 clients-title" data-i18n="clients.title">Clients & Partners</h3>
+          <ul class="clients-grid">
+            <li>
+              <a href="https://www.egluetech.com/" target="_blank" rel="noopener" class="client-card">
+                <img src="./assets/images/eglue.png" alt="eGlue" class="client-logo">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.wulp.it/" target="_blank" rel="noopener" class="client-card">
+                <img src="./assets/images/wulp.png" alt="WULP" class="client-logo">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.cnh.com/" target="_blank" rel="noopener" class="client-card">
+                <img src="./assets/images/cnh.png" alt="CNH" class="client-logo">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.iakta.it/" target="_blank" rel="noopener" class="client-card">
+                <img src="./assets/images/iakta-1.png" alt="Iakta" class="client-logo">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.avalad.com/" target="_blank" rel="noopener" class="client-card">
+                <img src="./assets/images/avalad.png" alt="Avalad" class="client-logo">
+              </a>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <!-- #RESUME -->
+      <article class="resume" data-page="resume">
+        <header>
+          <h2 class="h2 article-title" data-i18n="resume.title">Resume</h2>
+        </header>
+
+        <!-- Education -->
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
+            <h3 class="h3" data-i18n="resume.education">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">M.Sc. Software Engineering — Politecnico di Torino</h4>
+              <span>Oct 2017 — Mar 2020</span>
+              <p class="timeline-text"></p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">B.Sc. Computer & Communications Engineering — Lebanese Int’l University</h4>
+              <span>Sep 2013 — Jun 2017</span>
+              <p class="timeline-text"></p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Registered Engineer — Ordine degli Ingegneri (Italy)</h4>
+              <span data-i18n="resume.since2024">Since 2024</span>
+              <p class="timeline-text"></p>
+            </li>
+          </ol>
+        </section>
+
+        <!-- Experience -->
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
+            <h3 class="h3" data-i18n="resume.experience">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Technical Lead — Eglue (Self-employed)</h4>
+              <span>Jun 2023 — Present · Remote, Italy</span>
+              <p class="timeline-text">
+                Consultant for CNH Industrial & Iveco. Backend dev with C#/.NET 7/8, Azure; Azure deployments; SQL & NoSQL (Cosmos DB); Azure DevOps & pipelines.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Technical Lead — Avalad</h4>
+              <span>Jun 2023 — Jul 2025 · Remote, Canada</span>
+              <p class="timeline-text">
+                Backend dev for HEABC using .NET 7/8 & Azure. DocuSign integration and legacy modernization.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Full Stack Developer — Iakta</h4>
+              <span>May 2020 — Jun 2023 · Torino, Italy</span>
+              <p class="timeline-text">
+                Mobile app dev (Android, Flutter), .NET Core APIs, DB management; Azure Service Bus, Data Lake, Cosmos DB.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Android Developer (KaraokeOne) — Leopizzi s.r.l</h4>
+              <span>Dec 2020 — Dec 2021 · Freelance</span>
+              <p class="timeline-text">
+                Developed Kotlin video/audio singing app with leaderboard and user interaction features.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Software Dev Intern — Iakta</h4>
+              <span>Nov 2019 — May 2020 · Torino, Italy</span>
+              <p class="timeline-text">Full-stack intern; hybrid mobile apps.</p>
+            </li>
+          </ol>
+        </section>
+
+        <!-- Skills -->
+        <section class="skill">
+          <h3 class="h3 skills-title" data-i18n="skills.title">My skills</h3>
+
+          <ul class="skills-list content-card">
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5" data-i18n="skills.dotnet">.NET (6–9), C#, ASP.NET Core</h5>
+                <data value="95">95%</data>
+              </div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 95%;"></div></div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5" data-i18n="skills.azure">Azure (Service Bus, Blob, Data Lake, Cosmos DB)</h5>
+                <data value="90">90%</data>
+              </div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 90%;"></div></div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5" data-i18n="skills.arch">Microservices, REST APIs, Clean Architecture</h5>
+                <data value="90">90%</data>
+              </div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 90%;"></div></div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5" data-i18n="skills.db">Databases (MS SQL, NoSQL)</h5>
+                <data value="90">90%</data>
+              </div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 90%;"></div></div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5" data-i18n="skills.cicd">CI/CD (Azure DevOps, Pipelines, Docker)</h5>
+                <data value="85">85%</data>
+              </div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 85%;"></div></div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5" data-i18n="skills.langs">Languages & Frameworks: Python, Kotlin, Java, JavaScript, EF, ABP, Flutter, OData</h5>
+                <data value="80">80%</data>
+              </div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 80%;"></div></div>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <!-- #CONTACT -->
+      <article class="contact" data-page="contact">
+        <header>
+          <h2 class="h2 article-title" data-i18n="contact.title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <!-- Torino -->
+            <iframe id="map-iframe"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3333.092518073161!2d7.673778615061679!3d45.07031147910181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47886c6a537172b7%3A0x4029b9c9d5faf60!2sTurin%2C%20Metropolitan%20City%20of%20Turin%2C%20Italy!5e0!3m2!1sen!2sus!4v1695025588385!5m2!1sen!2sus"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+          <h3 class="h3 form-title" data-i18n="contact.formTitle">Contact Form</h3>
+
+          <form id="contact-form" class="form">
+            <div class="input-wrapper">
+              <input type="text" id="fullname" name="fullname" class="form-input"
+                     placeholder="Full name" required data-i18n-placeholder="contact.fullname">
+              <input type="email" id="email" name="email" class="form-input"
+                     placeholder="Email address" required data-i18n-placeholder="contact.email">
+            </div>
+            <textarea id="message" name="message" class="form-input"
+                      placeholder="Your Message" required data-i18n-placeholder="contact.message"></textarea>
+
+            <button class="form-btn" type="submit">
+              <ion-icon name="paper-plane"></ion-icon>
+              <span data-i18n="contact.send">Send Message</span>
+            </button>
+          </form>
+        </section>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- your js -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

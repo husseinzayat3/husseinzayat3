@@ -1,0 +1,34 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Warm gold gradient similar to your icon -->
+    <linearGradient id="g" x1="0" y1="0" x2="128" y2="128" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFC76B"/>
+      <stop offset="1" stop-color="#FF9A3E"/>
+    </linearGradient>
+  </defs>
+
+  <!-- App window -->
+  <rect x="12" y="18" width="104" height="92" rx="10" stroke="url(#g)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M12 36H116" stroke="url(#g)" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Window dots -->
+  <circle cx="26" cy="27" r="3" fill="url(#g)"/>
+  <circle cx="38" cy="27" r="3" fill="url(#g)"/>
+  <circle cx="50" cy="27" r="3" fill="url(#g)"/>
+
+  <!-- Team: side members -->
+  <!-- Left member -->
+  <circle cx="42" cy="66" r="9" stroke="url(#g)" stroke-width="3.5"/>
+  <path d="M28 88c0-8.5 6.9-15.5 15.5-15.5S59 79.5 59 88" stroke="url(#g)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Right member -->
+  <circle cx="86" cy="66" r="9" stroke="url(#g)" stroke-width="3.5"/>
+  <path d="M72 88c0-8.5 6.9-15.5 15.5-15.5S103 79.5 103 88" stroke="url(#g)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Lead (center) -->
+  <circle cx="64" cy="62" r="12" stroke="url(#g)" stroke-width="3.5"/>
+  <path d="M44 96c0-11 9-20 20-20s20 9 20 20" stroke="url(#g)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Crown for the lead -->
+  <path d="M56 44l3.5 4.5 4.5-6 4.5 6 3.5-4.5" stroke="url(#g)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="64" cy="36.5" r="2.2" fill="url(#g)"/>
+</svg>
