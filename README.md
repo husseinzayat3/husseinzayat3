@@ -39,3 +39,37 @@ I help businesses design scalable architectures, modernize legacy systems, and s
 ---
 
 ## 📂 Project Structure
+
+.
+├── index.html                # Main HTML page
+├── assets/
+│   ├── css/
+│   │   └── style.css         # Global styles
+│   ├── js/
+│   │   └── script.js         # Navigation, theme, language toggle
+│   ├── images/               # Profile picture, client logos, blog images
+│   └── icons/                # SVG icons
+└── README.md                 # Project documentation
+
+-
+
+## 🛠️ Tech Stack
+
+- **HTML5** — semantic and accessible markup  
+- **CSS3** — responsive and modern design  
+- **JavaScript (Vanilla)** — navigation, interactivity, theme toggle  
+- **Ionicons** — icons for UI  
+- **Google Fonts (Poppins)** — typography  
+
+---
+
+## 📖 How to Run Locally
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/husseinzayat3/portfolio.git
+   cd portfolio
+
+2. Open index.html in your browser.
+Notes: No build tools are required — it’s a lightweight static website.
