@@ -1,20 +1,7 @@
-```javascript
-function setTheme(t){ 
-  root.setAttribute('data-theme', t); 
-  localStorage.setItem('theme', t); 
-  if (icon) icon.setAttribute('name', t==='dark'?'sunny-outline':'moon-outline'); 
+javascript
+function getFromDict(dict, key) {
+  return dict[key] !== undefined ? dict[key] : null;
 }
-setTheme(theme);
-```
-
-// =====================
-// Original behaviors
-// =====================
-
-// element toggle function
-const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
-
-// sidebar variables
 const sidebar = document.querySelector("[data-sidebar]");
 // const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 // elementToggleFunc(sidebar)  // Auto-open sidebar (kept from your code)
