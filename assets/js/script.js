@@ -1,7 +1,7 @@
 ```javascript
 function setTheme(t){ 
   root.setAttribute('data-theme', t); 
-  localStorage.setItem('theme', t); 
+  if (icon) icon.setAttribute('data-icon', t==='dark'?'sunny-outline':'moon-outline'); 
   if (icon) icon.setAttribute('name', t==='dark'?'sunny-outline':'moon-outline'); 
 }
 setTheme(theme);
