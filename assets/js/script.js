@@ -11,6 +11,8 @@ setTheme(theme);
 // Original behaviors
 // =====================
 
+  if (!icon) return; 
+  
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
