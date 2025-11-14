@@ -2,7 +2,7 @@
 function setTheme(t){ 
   root.setAttribute('data-theme', t); 
   localStorage.setItem('theme', t); 
-  if (icon) icon.setAttribute('name', t==='dark'?'sunny-outline':'moon-outline'); 
+  if (typeof icon !== 'undefined' && icon) icon.setAttribute('name', t==='dark'?'sunny-outline':'moon-outline'); 
 }
 setTheme(theme);
 ```
@@ -319,3 +319,4 @@ if (btn) btn.addEventListener('click', ()=> setTheme(root.getAttribute('data-the
     }
   })();
 })();
+```
