@@ -11,7 +11,9 @@ setTheme(theme);
 // Original behaviors
 // =====================
 
+  if (icon) { 
 // element toggle function
+  } 
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
 // sidebar variables
