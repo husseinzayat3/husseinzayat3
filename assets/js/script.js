@@ -1,4 +1,3 @@
-```javascript
 function setTheme(t){ 
   root.setAttribute('data-theme', t); 
   localStorage.setItem('theme', t); 
