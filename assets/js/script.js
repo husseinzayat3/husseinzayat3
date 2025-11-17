@@ -260,6 +260,7 @@ if (btn) btn.addEventListener('click', ()=> setTheme(root.getAttribute('data-the
   }
 
   function translate(lang) {
+    if (!SUPPORTED.includes(lang)) lang = DEFAULT_LANG;
     const titleTxt = getFromDict(lang, 'docTitle');
     if (titleTxt && titleEl) titleEl.textContent = titleTxt;
     html.setAttribute('lang', lang);
@@ -281,6 +282,7 @@ if (btn) btn.addEventListener('click', ()=> setTheme(root.getAttribute('data-the
   }
 
   function setLang(lang) {
+    if (!SUPPORTED.includes(lang)) lang = DEFAULT_LANG;
     localStorage.setItem('lang', lang);
     translate(lang);
   }
