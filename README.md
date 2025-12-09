@@ -16,6 +16,7 @@ I’m Hussein Zayat, a Senior Backend Consultant & Technical Lead based in Turin
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
 
 ### 🔝 Top Contributed Repo
+Most of my work is on private repos, the stats are not correct
 ![](https://github-contributor-stats.vercel.app/api?username=husseinzayat3&limit=5&theme=dark&combine_all_yearly_contributions=true)
 
 ---
