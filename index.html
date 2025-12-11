@@ -86,33 +86,34 @@
 
     <!-- #main-content -->
     <div class="main-content">
+    <!-- #NAVBAR -->
+    <nav class="navbar">
+      <ul class="navbar-list">
+        <li class="navbar-item">
+          <button class="navbar-link active" data-nav-link data-nav-target="about" data-i18n="nav.about">About</button>
+        </li>
+        <li class="navbar-item">
+          <button class="navbar-link" data-nav-link data-nav-target="resume" data-i18n="nav.resume">Resume</button>
+        </li>
+        <li class="navbar-item">
+          <button class="navbar-link" data-nav-link data-nav-target="blog" data-i18n="nav.blog">Blog</button>
+        </li>
+        <li class="navbar-item">
+          <button class="navbar-link" data-nav-link data-nav-target="contact" data-i18n="nav.contact">Contact</button>
+        </li>
 
-      <!-- #NAVBAR -->
-      <nav class="navbar">
-        <ul class="navbar-list">
-          <li class="navbar-item">
-            <button class="navbar-link active" data-nav-link data-nav-target="about" data-i18n="nav.about">About</button>
-          </li>
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link data-nav-target="resume" data-i18n="nav.resume">Resume</button>
-          </li>
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link data-nav-target="contact" data-i18n="nav.contact">Contact</button>
-          </li>
+        <!-- Theme toggle -->
+        <button id="theme-toggle" class="navbar-link" aria-label="Toggle theme">
+          <ion-icon id="theme-icon" name="moon-outline"></ion-icon>
+        </button>
 
-          <!-- Theme toggle -->
-          <button id="theme-toggle" class="navbar-link" aria-label="Toggle theme">
-            <ion-icon id="theme-icon" name="moon-outline"></ionicon>
-          </button>
-
-          <!-- Language toggle -->
-          <button id="lang-toggle" class="navbar-link" aria-label="Toggle language">
-            <ion-icon name="globe-outline"></ion-icon>
-            <span id="lang-toggle-text">IT</span>
-          </button>
-        </ul>
-      </nav>
-
+        <!-- Language toggle -->
+        <button id="lang-toggle" class="navbar-link" aria-label="Toggle language">
+          <ion-icon name="globe-outline"></ion-icon>
+          <span id="lang-toggle-text">IT</span>
+        </button>
+      </ul>
+    </nav>
       <!-- #ABOUT -->
       <article class="about active" data-page="about">
         <header>
@@ -358,6 +359,158 @@
           </ul>
         </section>
       </article>
+
+      <!-- #BLOG -->
+<article class="blog" data-page="blog">
+  <header>
+    <h2 class="h2 article-title" data-i18n="blog.title">Blog</h2>
+  </header>
+
+  <section class="blog-posts">
+    <ul class="blog-list">
+
+      <!-- Blog post 1 -->
+      <!-- Blog post 1 (updated to modal like blog 12) -->
+      <li class="blog-group-title">October 2025</li>
+<li class="blog-item">
+  <a href="#" class="blog-card" onclick="openBlogModal('vibe_coding')">
+    <figure class="blog-banner-box">
+      <!-- You can keep your existing image or replace it -->
+      <img src="./assets/images/vibe_code_blog.png" alt="Vibe Coding — Fast Prototypes, Fragile Foundations" loading="lazy">
+    </figure>
+    <div class="blog-content">
+      <h2 class="h3 blog-title">Vibe Coding: Fast Prototypes, Fragile Foundations</h3>
+      <p class="blog-meta">Oct 2, 2025 · 2 min read</p>
+      <br>
+      <p class="blog-text">
+        Vibe coding is great for exploring ideas fast. But speed without structure often turns into tech debt.
+        Here’s what I learned about balancing rapid prototyping with solid engineering practices.
+        <br><br><strong>Read more →</strong>
+      </p>
+    </div>
+  </a>
+</li>
+<div id="vibe_coding" class="blog-modal">
+  <div class="blog-modal-content">
+    <span class="close-btn" onclick="closeBlogModal('vibe_coding')">&times;</span>
+    <h2>Vibe Coding: Fast Prototypes, Fragile Foundations</h2>
+    <p><em>Oct 2, 2025 · 2 min read</em></p>
+    <hr><br>
+
+    <p>
+      Over the past weeks, I experimented with vibe coding while building a simple app with complex logic.
+      It’s fun and it definitely compresses time-to-prototype — but it also reinforced a timeless lesson:
+      <strong>speed without structure is expensive later</strong>.
+    </p>
+
+    <h3>What works well</h3>
+    <ul>
+      <li>Quick exploration of ideas and UX flows.</li>
+      <li>Unblocking unknowns: “Can this even work?”</li>
+      <li>Generating momentum for stakeholders and teams.</li>
+    </ul>
+
+    <h3>Where it bites back</h3>
+    <ul>
+      <li>Hidden coupling and unclear boundaries.</li>
+      <li>Weak tests and flaky behavior under change.</li>
+      <li>Onboarding friction: the next developer slows down.</li>
+    </ul>
+
+    <h3>The balance that works for me</h3>
+    <ul>
+      <li><strong>Timebox the prototype</strong> — agree it will be thrown away or hardened.</li>
+      <li><strong>Capture decisions</strong> — note trade-offs and assumptions as you go.</li>
+      <li><strong>Stabilize early</strong> — add tests, interfaces, and clear module contracts.</li>
+      <li><strong>Refactor to patterns</strong> — before adding features, make the shape right.</li>
+    </ul>
+
+    <p>
+      For me, vibe coding is a <em>booster</em>, not a destination. It shines when used to learn fast —
+      and then replaced (or refactored) with code that’s maintainable, testable, and ready for a team.
+    </p>
+
+    <br>
+    <p><strong>Tags:</strong> #Prototyping #SoftwareEngineering #CleanArchitecture #Testing #DevEx</p>
+  </div>
+</div>
+
+
+      <!-- Blog post 2 -->
+<li class="blog-item">
+  <a href="#" class="blog-card" onclick="openBlogModal('ai_engineering')">
+    <figure class="blog-banner-box">
+      <img src="./assets/images/blog-2.png" alt="AI and Engineering Blog" loading="lazy">
+    </figure>
+    <div class="blog-content">
+      <h3 class="h3 blog-title">When Everyone Can Code, What Makes an Engineer?</h3>
+      <p class="blog-meta">Oct 7, 2025 · 4 min read</p>
+      <br>
+      <p class="blog-text">
+        In the age of AI, it feels like everyone can be a developer. With a few prompts, we can generate working code, scaffold applications, or even automate documentation.
+        But writing code has never been the hardest part. Engineering is about something deeper — designing systems that scale, evolve, and empower others. 
+        <br><br>
+        <strong>Read more →</strong>
+      </p>
+    </div>
+  </a>
+</li>
+<div id="ai_engineering" class="blog-modal">
+  <div class="blog-modal-content">
+    <span class="close-btn" onclick="closeBlogModal('ai_engineering')">&times;</span>
+    <h2>When Everyone Can Code, What Makes an Engineer?</h2>
+    <p><em>Oct 7, 2025 · 4 min read</em></p>
+    <hr><br>
+
+    <p>
+      In the age of AI, it feels like everyone can be a developer.
+      With a few prompts, we can generate working code, scaffold entire applications, or even automate documentation.
+      It’s exciting — and a little bit surreal — to see how far we’ve come.
+    </p>
+
+    <p>
+      But as someone who’s spent years building backend systems, designing architectures, and leading engineering teams,
+      I’ve learned that writing code has never been the hardest part of software development.
+      AI has made coding easier — but <strong>engineering</strong> is still about something deeper.
+    </p>
+
+    <h3>The difference between code and engineering</h3>
+    <p>
+      Writing code is an act of creation. Engineering is an act of design.
+      A good engineer doesn’t just make a feature work — they make it fit into a system that others can understand, maintain, and extend.
+      They think about scalability, performance, and failure scenarios long before they happen.
+    </p>
+
+    <h3>Where AI helps — and where it doesn’t</h3>
+    <p>
+      AI can now write decent code, generate unit tests, and even propose optimizations. It’s an incredible assistant.
+      But what AI still struggles with is <strong>context</strong> — understanding trade-offs, designing boundaries, and thinking in systems rather than snippets.
+      Our job is shifting from writing code to <strong>orchestrating intelligence</strong> — both human and artificial — to build reliable and meaningful software.
+    </p>
+
+    <h3>The human side of engineering</h3>
+    <p>
+      Good engineers solve problems. Great engineers make it easier for others to solve them.
+      When everyone can write code, the value shifts to those who can architect, govern, and scale it sustainably.
+      AI won’t replace that anytime soon.
+    </p>
+
+    <h3>Closing thought</h3>
+    <p>
+      The future belongs to those who can blend technical precision with human judgment.
+      Code may be generated by machines — but engineering will always be a human art.
+    </p>
+
+    <br>
+    <p><strong>Tags:</strong> #AI #SoftwareEngineering #Leadership #DotNet #Azure #BackendDevelopment</p>
+  </div>
+</div>
+    </ul>
+  </section>
+</article>
+
+<!-- Blog Modal -->
+
 
       <!-- #CONTACT -->
       <article class="contact" data-page="contact">

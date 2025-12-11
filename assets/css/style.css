@@ -78,7 +78,34 @@
   --text-gradient-yellow: linear-gradient(to right, var(--brand-gold-1), var(--brand-gold-2));
 }
 
-
+.blog-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+  backdrop-filter: blur(3px);
+}
+.blog-modal-content {
+  background: #fff;
+  margin: 5% auto;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  line-height: 1.7;
+}
+.close-btn {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.close-btn:hover {
+  color: #ff5a5f;
+}
 
 
 /*-----------------------------------*\
@@ -287,7 +314,7 @@ main {
   transition: var(--transition-2);
 }
 
-.sidebar.active { max-height: 405px; }
+.sidebar.active { max-height: 650px; }
 
 .sidebar-info {
   position: relative;
@@ -1221,7 +1248,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     margin-bottom: 30px;
   }
 
-  .sidebar.active { max-height: 584px; }
+  .sidebar.active { max-height: 650px; }
 
   .sidebar-info { gap: 25px; }
 
@@ -1772,8 +1799,8 @@ img.profile-pic {
 }
 
 .avatar-box {
-  width: 135px;
-  height: 180px;
+  width: 80%;
+  height: 80%;
   border-radius: 15px;
   overflow: hidden;
 }
@@ -1832,4 +1859,94 @@ img.profile-pic {
   .client-card{ transition: none; }
   .client-card:hover{ transform:none; }
   .client-logo{ transition: none; }
+}
+
+/* Scope to your blog section to avoid side effects */
+article.blog .blog-posts { margin-top: 1rem; }
+
+/* Grid layout with clear gaps between cards */
+article.blog .blog-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;      /* 1 column on mobile */
+  gap: 1.25rem;                    /* space between posts */
+}
+
+/* 2 columns on tablets, 3 on large screens */
+@media (min-width: 768px) {
+  article.blog .blog-list { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1200px) {
+  article.blog .blog-list { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Card appearance for each post */
+article.blog .blog-item { margin: 0; }
+article.blog .blog-card {
+  display: block;
+  height: 100%;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+article.blog .blog-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.10);
+  border-color: rgba(0,0,0,0.12);
+}
+
+/* Consistent banner height for all cards */
+article.blog .blog-banner-box {
+  width: 100%;
+  aspect-ratio: 16 / 9;            /* keeps all banners same height */
+  overflow: hidden;
+}
+article.blog .blog-banner-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Content spacing & typographic rhythm */
+article.blog .blog-content { padding: 1rem 1rem 1.25rem; }
+article.blog .blog-title { margin: 0 0 .4rem; line-height: 1.3; color: white}
+article.blog .blog-meta {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+article.blog .blog-text {
+  margin-top: .75rem;
+
+}
+
+/* Optional: section headers (e.g., month separators) */
+article.blog .blog-group-title {
+  grid-column: 1 / -1;
+  margin: 0.25rem 0 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #666;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  opacity: .9;
+}
+
+/* Dark mode tweak (if your site supports it) */
+@media (prefers-color-scheme: dark) {
+  article.blog .blog-card {
+    background: hsl(0deg 0% 14% / 82%);
+    border-color: rgba(255,255,255,0.08);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+    color: var(--orange-yellow-crayola);
+  }
+  article.blog .blog-text { color: #ddd; }
+  article.blog .blog-meta { opacity: .8; }
 }

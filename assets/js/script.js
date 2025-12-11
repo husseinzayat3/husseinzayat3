@@ -93,6 +93,14 @@ if (form && formBtn) {
     });
   }
 }
+function openBlogModal(id) {
+  document.getElementById(id).style.display = 'block';
+  document.body.style.overflow = 'hidden';
+}
+function closeBlogModal(id) {
+  document.getElementById(id).style.display = 'none';
+  document.body.style.overflow = 'auto';
+}
 
 // page navigation — use data-nav-target (stable across languages)
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
