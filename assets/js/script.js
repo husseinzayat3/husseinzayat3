@@ -94,12 +94,18 @@ if (form && formBtn) {
   }
 }
 function openBlogModal(id) {
-  document.getElementById(id).style.display = 'block';
-  document.body.style.overflow = 'hidden';
+  const modal = document.getElementById(id);
+  if (modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
 }
 function closeBlogModal(id) {
-  document.getElementById(id).style.display = 'none';
-  document.body.style.overflow = 'auto';
+  const modal = document.getElementById(id);
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
 }
 
 // page navigation — use data-nav-target (stable across languages)
@@ -124,20 +130,70 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
-// Simple mailto contact
+// =====================
+// EmailJS Contact Form
+// =====================
+
+// Initialize EmailJS
+(function () {
+  emailjs.init("Qwm-Ap280pqF7mu-x");
+})();
+
 const contactForm = document.getElementById("contact-form");
 if (contactForm) {
   contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
-    const name = encodeURIComponent(document.getElementById("fullname").value);
-    const email = encodeURIComponent(document.getElementById("email").value);
-    const message = encodeURIComponent(document.getElementById("message").value);
 
-    const to = "youremail@example.com"; // TODO: set your email
-    const subject = `Contact from ${name}`;
-    const body = `Full name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
-    const mailtoLink = `mailto:${to}?subject=${subject}&body=${body}`;
-    window.location.href = mailtoLink;
+    const submitBtn = contactForm.querySelector('.form-btn');
+    const btnText = submitBtn.querySelector('span');
+    const originalText = btnText.textContent;
+
+    // Disable button and show loading state
+    submitBtn.disabled = true;
+    btnText.textContent = 'Sending...';
+
+    // Get form data
+    const templateParams = {
+      name: document.getElementById("fullname").value,    // Matches {{name}} in your template
+      title: document.getElementById("message").value,    // Matches {{title}} in your template (using message as the request)
+      email: document.getElementById("email").value,      // The visitor's email
+      to_email: document.getElementById("email").value,   // Often used for dynamic "To" field
+      message: document.getElementById("message").value   // Sending message key just in case
+    };
+
+    // Send email using EmailJS
+    emailjs.send('service_zgi2yvl', 'template_nl4y9sg', templateParams)
+      .then(function (response) {
+        console.log('SUCCESS!', response.status, response.text);
+
+        // Show success message
+        btnText.textContent = '✓ Message Sent!';
+        submitBtn.style.background = 'linear-gradient(135deg, hsl(142, 76%, 36%), hsl(142, 71%, 45%))';
+
+        // Reset form
+        contactForm.reset();
+
+        // Reset button after 3 seconds
+        setTimeout(() => {
+          btnText.textContent = originalText;
+          submitBtn.disabled = false;
+          submitBtn.style.background = '';
+        }, 3000);
+
+      }, function (error) {
+        console.log('FAILED...', error);
+
+        // Show error message
+        btnText.textContent = '✗ Failed to send';
+        submitBtn.style.background = 'linear-gradient(135deg, hsl(0, 76%, 50%), hsl(0, 71%, 60%))';
+
+        // Reset button after 3 seconds
+        setTimeout(() => {
+          btnText.textContent = originalText;
+          submitBtn.disabled = false;
+          submitBtn.style.background = '';
+        }, 3000);
+      });
   });
 }
 

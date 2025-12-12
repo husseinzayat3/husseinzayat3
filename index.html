@@ -461,38 +461,103 @@
         </header>
 
         <section class="blog-posts">
-          <ul class="blog-list">
+          <ul class="blog-list projects-list"> <!-- Added projects-list class to inherit grid style -->
 
             <!-- Blog post 1 -->
-            <!-- Blog post 1 (updated to modal like blog 12) -->
-            <li class="blog-group-title">October 2025</li>
-            <li class="blog-item">
-              <a href="#" class="blog-card" onclick="openBlogModal('vibe_coding')">
-                <figure class="blog-banner-box">
-                  <!-- You can keep your existing image or replace it -->
-                  <img src="./assets/images/vibe_code_blog.png" alt="Vibe Coding — Fast Prototypes, Fragile Foundations"
-                    loading="lazy">
-                </figure>
-                <div class="blog-content">
-                  <h2 class="h3 blog-title">Vibe Coding: Fast Prototypes, Fragile Foundations</h3>
-                    <p class="blog-meta">Oct 2, 2025 · 2 min read</p>
-                    <br>
-                    <p class="blog-text">
-                      Vibe coding is great for exploring ideas fast. But speed without structure often turns into tech
-                      debt.
-                      Here’s what I learned about balancing rapid prototyping with solid engineering practices.
-                      <br><br><strong>Read more →</strong>
-                    </p>
+            <li class="blog-item project-item active" data-filter-item data-category="web development">
+              <div class="blog-card project-card">
+                <div class="project-image">
+                  <a href="#" onclick="openBlogModal('vibe_coding'); return false;">
+                    <img src="./assets/images/vibe-coding-blog.png" alt="Vibe Coding" loading="lazy">
+                  </a>
                 </div>
-              </a>
+                <div class="project-content">
+                  <div class="project-header">
+                    <h3 class="project-title">
+                      <a href="#" onclick="openBlogModal('vibe_coding'); return false;">Vibe Coding: Fast Prototypes,
+                        Fragile Foundations</a>
+                    </h3>
+                    <time class="publish-date" datetime="2025-10-02">Oct 2, 2025</time>
+                  </div>
+                  <p class="project-description">
+                    Vibe coding is great for exploring ideas fast. But speed without structure often turns into tech
+                    debt.
+                    Here’s what I learned about balancing rapid prototyping with solid engineering practices.
+                  </p>
+                  <a href="#" class="blog-read-more" onclick="openBlogModal('vibe_coding'); return false;">Read more
+                    →</a>
+                </div>
+              </div>
             </li>
-            <div id="vibe_coding" class="blog-modal">
-              <div class="blog-modal-content">
-                <span class="close-btn" onclick="closeBlogModal('vibe_coding')">&times;</span>
-                <h2>Vibe Coding: Fast Prototypes, Fragile Foundations</h2>
-                <p><em>Oct 2, 2025 · 2 min read</em></p>
-                <hr><br>
 
+
+            <!-- Blog post 2 -->
+            <li class="blog-item project-item active" data-filter-item data-category="web development">
+              <div class="blog-card project-card">
+                <div class="project-image">
+                  <a href="#" onclick="openBlogModal('ai_engineering'); return false;">
+                    <img src="./assets/images/ai-engineer-blog.png" alt="AI and Engineering" loading="lazy">
+                  </a>
+                </div>
+                <div class="project-content">
+                  <div class="project-header">
+                    <h3 class="project-title">
+                      <a href="#" onclick="openBlogModal('ai_engineering'); return false;">When Everyone Can Code, What
+                        Makes an Engineer?</a>
+                    </h3>
+                    <time class="publish-date" datetime="2025-10-07">Oct 7, 2025</time>
+                  </div>
+                  <p class="project-description">
+                    In the age of AI, it feels like everyone can be a developer. But writing code has never been the
+                    hardest part.
+                    Engineering is about something deeper — designing systems that scale, evolve, and empower others.
+                  </p>
+                  <a href="#" class="blog-read-more" onclick="openBlogModal('ai_engineering'); return false;">Read more
+                    →</a>
+                </div>
+              </div>
+            </li>
+
+            <!-- Blog post 3 -->
+            <li class="blog-item project-item active" data-filter-item data-category="web development">
+              <div class="blog-card project-card">
+                <div class="project-image">
+                  <a href="#" onclick="openBlogModal('google_antigravity'); return false;">
+                    <img src="./assets/images/google-antigravity-blog.png" alt="Google Antigravity" loading="lazy">
+                  </a>
+                </div>
+                <div class="project-content">
+                  <div class="project-header">
+                    <h3 class="project-title">
+                      <a href="#" onclick="openBlogModal('google_antigravity'); return false;">Impressed by Google
+                        Antigravity: A Developer’s Perspective</a>
+                    </h3>
+                    <time class="publish-date" datetime="2025-12-12">Dec 12, 2025</time>
+                  </div>
+                  <p class="project-description">
+                    I try a lot of AI tools for development, but Google Antigravity is the first one that genuinely made
+                    me pause and rethink how AI fits into my daily workflow.
+                    It feels less like a tool that responds to prompts and more like a system that understands intent.
+                  </p>
+                  <a href="#" class="blog-read-more" onclick="openBlogModal('google_antigravity'); return false;">Read
+                    more →</a>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+
+          <!-- Modals (Hidden by default) -->
+          <div id="vibe_coding" class="blog-modal">
+            <div class="blog-modal-content">
+              <span class="close-btn" onclick="closeBlogModal('vibe_coding')">&times;</span>
+              <figure class="modal-banner-box">
+                <img src="./assets/images/vibe-coding-blog.png" alt="Vibe Coding">
+              </figure>
+              <h2>Vibe Coding: Fast Prototypes, Fragile Foundations</h2>
+              <p class="modal-meta">Oct 2, 2025 · 2 min read</p>
+              <hr class="modal-divider">
+              <div class="modal-body">
                 <p>
                   Over the past weeks, I experimented with vibe coding while building a simple app with complex logic.
                   It’s fun and it definitely compresses time-to-prototype — but it also reinforced a timeless lesson:
@@ -530,36 +595,18 @@
                 <p><strong>Tags:</strong> #Prototyping #SoftwareEngineering #CleanArchitecture #Testing #DevEx</p>
               </div>
             </div>
+          </div>
 
-
-            <!-- Blog post 2 -->
-            <li class="blog-item">
-              <a href="#" class="blog-card" onclick="openBlogModal('ai_engineering')">
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.png" alt="AI and Engineering Blog" loading="lazy">
-                </figure>
-                <div class="blog-content">
-                  <h3 class="h3 blog-title">When Everyone Can Code, What Makes an Engineer?</h3>
-                  <p class="blog-meta">Oct 7, 2025 · 4 min read</p>
-                  <br>
-                  <p class="blog-text">
-                    In the age of AI, it feels like everyone can be a developer. With a few prompts, we can generate
-                    working code, scaffold applications, or even automate documentation.
-                    But writing code has never been the hardest part. Engineering is about something deeper — designing
-                    systems that scale, evolve, and empower others.
-                    <br><br>
-                    <strong>Read more →</strong>
-                  </p>
-                </div>
-              </a>
-            </li>
-            <div id="ai_engineering" class="blog-modal">
-              <div class="blog-modal-content">
-                <span class="close-btn" onclick="closeBlogModal('ai_engineering')">&times;</span>
-                <h2>When Everyone Can Code, What Makes an Engineer?</h2>
-                <p><em>Oct 7, 2025 · 4 min read</em></p>
-                <hr><br>
-
+          <div id="ai_engineering" class="blog-modal">
+            <div class="blog-modal-content">
+              <span class="close-btn" onclick="closeBlogModal('ai_engineering')">&times;</span>
+              <figure class="modal-banner-box">
+                <img src="./assets/images/ai-engineer-blog.png" alt="AI Engineer">
+              </figure>
+              <h2>When Everyone Can Code, What Makes an Engineer?</h2>
+              <p class="modal-meta">Oct 7, 2025 · 4 min read</p>
+              <hr class="modal-divider">
+              <div class="modal-body">
                 <p>
                   In the age of AI, it feels like everyone can be a developer.
                   With a few prompts, we can generate working code, scaffold entire applications, or even automate
@@ -610,7 +657,82 @@
                 <p><strong>Tags:</strong> #AI #SoftwareEngineering #Leadership #DotNet #Azure #BackendDevelopment</p>
               </div>
             </div>
-          </ul>
+          </div>
+
+          <div id="google_antigravity" class="blog-modal">
+            <div class="blog-modal-content">
+              <span class="close-btn" onclick="closeBlogModal('google_antigravity')">&times;</span>
+              <figure class="modal-banner-box">
+                <img src="./assets/images/google-antigravity-blog.png" alt="Google Antigravity">
+              </figure>
+              <h2>Impressed by Google Antigravity: A Developer’s Perspective After Two Weeks</h2>
+              <p class="modal-meta">Dec 12, 2025 · 3 min read</p>
+              <hr class="modal-divider">
+
+              <div class="modal-body">
+                <p>
+                  Over the past couple of weeks, I’ve been using Google Antigravity, and I didn’t expect it to leave
+                  this kind of impression on me.
+                  I try a lot of AI tools for development, but this is the first one that genuinely made me pause and
+                  rethink how AI fits into my daily workflow.
+                </p>
+
+                <p>
+                  What makes Antigravity stand out isn’t just speed or code generation — it’s understanding.
+                  It feels less like a tool that responds to prompts and more like a system that understands intent.
+                </p>
+
+                <h3>Where It Really Shines: Frontend Development</h3>
+                <p>
+                  Frontend development is where Google Antigravity truly excels.
+                  From layout structure to UI flow, it consistently produces results that feel intentional and well
+                  thought out.
+                  Turning an idea into a working interface happens incredibly fast, and the quality is surprisingly
+                  high.
+                </p>
+                <p>
+                  Instead of fighting boilerplate or repetitive UI tasks, I found myself focusing more on product
+                  decisions and user experience — which is exactly where developers should spend their time.
+                </p>
+
+                <h3>Backend: Promising, but Still Evolving</h3>
+                <p>
+                  On the backend side, Antigravity isn’t perfect yet. Some areas still need refinement, and you can tell
+                  it’s an evolving product.
+                  That said, the foundation is clearly there. With continued improvements, it has the potential to
+                  become a strong full-stack companion rather than just a frontend powerhouse.
+                </p>
+
+                <h3>Why This Matters</h3>
+                <p>
+                  What impressed me most is how Antigravity changes the feeling of development:
+                </p>
+                <ul>
+                  <li>Less friction</li>
+                  <li>Faster experimentation</li>
+                  <li>More room for creativity</li>
+                  <li>Less mental fatigue</li>
+                </ul>
+                <p>
+                  It’s one of the first AI tools that made building things feel genuinely enjoyable again.
+                </p>
+
+                <h3>Final Thoughts</h3>
+                <p>
+                  Google Antigravity feels like a glimpse into where AI-assisted development is heading.
+                  It’s not perfect — and that’s okay — but it already delivers real value, especially for frontend work.
+                </p>
+                <p>
+                  If you’re a developer, product builder, or someone who enjoys creating software, this is absolutely
+                  worth trying.
+                  I didn’t expect to be this impressed, but here we are.
+                </p>
+
+                <br>
+                <p><strong>Tags:</strong> #GoogleAntigravity #AI #WebDevelopment #Frontend #Productivity</p>
+              </div>
+            </div>
+          </div>
         </section>
       </article>
 
@@ -655,6 +777,9 @@
 
     </div>
   </main>
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
   <!-- your js -->
   <script src="./assets/js/script.js"></script>
