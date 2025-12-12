@@ -69,7 +69,7 @@
           </li>
         </ul>
 
-        <div class="separator"></div>
+        <!-- <div class="separator"></div> -->
 
         <ul class="social-list">
           <li class="social-item">
@@ -239,39 +239,10 @@
           <h2 class="h2 article-title" data-i18n="resume.title">Resume</h2>
         </header>
 
-        <!-- Education -->
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
-            <h3 class="h3" data-i18n="resume.education">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">M.Sc. Software Engineering — Politecnico di Torino</h4>
-              <span>Oct 2017 — Mar 2020</span>
-              <p class="timeline-text"></p>
-            </li>
-
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">B.Sc. Computer & Communications Engineering — Lebanese Int’l University
-              </h4>
-              <span>Sep 2013 — Jun 2017</span>
-              <p class="timeline-text"></p>
-            </li>
-
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Registered Engineer — Ordine degli Ingegneri (Italy)</h4>
-              <span data-i18n="resume.since2024">Since 2024</span>
-              <p class="timeline-text"></p>
-            </li>
-          </ol>
-        </section>
-
         <!-- Experience -->
         <section class="timeline">
           <div class="title-wrapper">
-            <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
+            <div class="icon-box"><ion-icon name="briefcase-outline"></ion-icon></div>
             <h3 class="h3" data-i18n="resume.experience">Experience</h3>
           </div>
 
@@ -315,6 +286,38 @@
               <span>Nov 2019 — May 2020 · Torino, Italy</span>
               <p class="timeline-text">Full-stack intern; hybrid mobile apps.</p>
             </li>
+          </ol>
+        </section>
+
+        <!-- Education -->
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
+            <h3 class="h3" data-i18n="resume.education">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Registered Engineer — Ordine degli Ingegneri (Italy)</h4>
+              <span data-i18n="resume.since2024">Since 2024</span>
+              <p class="timeline-text"></p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">M.Sc. Software Engineering — Politecnico di Torino</h4>
+              <span>Oct 2017 — Mar 2020</span>
+              <p class="timeline-text"></p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">B.Sc. Computer & Communications Engineering — Lebanese Int’l University
+              </h4>
+              <span>Sep 2013 — Jun 2017</span>
+              <p class="timeline-text"></p>
+            </li>
+
           </ol>
         </section>
 
@@ -745,14 +748,45 @@
           <h2 class="h2 article-title" data-i18n="contact.title">Contact</h2>
         </header>
 
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <!-- Torino -->
-            <iframe id="map-iframe"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3333.092518073161!2d7.673778615061679!3d45.07031147910181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47886c6a537172b7%3A0x4029b9c9d5faf60!2sTurin%2C%20Metropolitan%20City%20of%20Turin%2C%20Italy!5e0!3m2!1sen!2sus!4v1695025588385!5m2!1sen!2sus"
-              width="400" height="300" loading="lazy"></iframe>
-          </figure>
+        <section class="contact-intro">
+          <h3 class="h3" data-i18n="contact.introTitle">Let's Build Something Great Together</h3>
+          <p class="contact-text" data-i18n="contact.introText">
+            Whether you have a project idea, need technical leadership, or just want to discuss the latest in AI and
+            software engineering, I’m always open to new opportunities.
+          </p>
+
+          <div class="contact-reasons">
+            <h4 class="h4" data-i18n="contact.whyTitle">Why reach out?</h4>
+            <ul class="reasons-list">
+              <li class="reason-item">
+                <div class="icon-box"><ion-icon name="construct-outline"></ion-icon></div>
+                <div class="reason-content">
+                  <h5 class="h5" data-i18n="contact.reason1.title">Scalable Architecture</h5>
+                  <p data-i18n="contact.reason1.text">Expertise in designing robust systems using .NET, Azure, and
+                    Microservices.</p>
+                </div>
+              </li>
+              <li class="reason-item">
+                <div class="icon-box"><ion-icon name="people-outline"></ion-icon></div>
+                <div class="reason-content">
+                  <h5 class="h5" data-i18n="contact.reason2.title">Technical Leadership</h5>
+                  <p data-i18n="contact.reason2.text">Guiding teams, improving dev culture, and delivering high-impact
+                    products.</p>
+                </div>
+              </li>
+              <li class="reason-item">
+                <div class="icon-box"><ion-icon name="rocket-outline"></ion-icon></div>
+                <div class="reason-content">
+                  <h5 class="h5" data-i18n="contact.reason3.title">Product-Minded Development</h5>
+                  <p data-i18n="contact.reason3.text">I don't just write code; I focus on solving real business problems
+                    efficiently.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
         </section>
+
+
 
         <section class="contact-form">
           <h3 class="h3 form-title" data-i18n="contact.formTitle">Contact Form</h3>

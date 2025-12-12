@@ -154,15 +154,15 @@ if (contactForm) {
 
     // Get form data
     const templateParams = {
-      name: document.getElementById("fullname").value,    // Matches {{name}} in your template
-      title: document.getElementById("message").value,    // Matches {{title}} in your template (using message as the request)
-      email: document.getElementById("email").value,      // The visitor's email
-      to_email: document.getElementById("email").value,   // Often used for dynamic "To" field
-      message: document.getElementById("message").value   // Sending message key just in case
+      title: "Portfolio Contact", // Static title for the subject
+      name: document.getElementById("fullname").value,
+      message: document.getElementById("message").value,
+      from_email: document.getElementById("email").value, // Matches {{from_email}}
+      email: document.getElementById("email").value       // Matches {{email}} for Reply-To
     };
 
     // Send email using EmailJS
-    emailjs.send('service_zgi2yvl', 'template_nl4y9sg', templateParams)
+    emailjs.send('service_zgi2yvl', 'template_bckr95f', templateParams)
       .then(function (response) {
         console.log('SUCCESS!', response.status, response.text);
 
@@ -262,18 +262,24 @@ if (btn) btn.addEventListener('click', () => setTheme(root.getAttribute('data-th
         title: "Projects",
         status: { live: "Live", wip: "Work in Progress", beta: "Beta", comingSoon: "Coming Soon" },
         repovate: {
-          title: "Repovate.com",
-          description: "Repository AI analysis and automated bug fix"
+          title: "Repovate.com (Repository AI Analysis & Automated Bug Fix)",
+          description: "Repository AI Analysis & Automated Bug Fix is an AI-powered tool that analyzes your codebase to detect bugs, security issues, and performance problems — and automatically generates fixes. It integrates with your Git workflow to keep code clean, secure, and production-ready with minimal effort."
         },
         jetgenius: {
-          title: "JetGenius",
-          description: "An innovative solution currently under development. More details coming soon as the project evolves."
+          title: "JetGenius (AI-powered travel assistant)",
+          description: "JetGenius is an AI-powered travel assistant that helps you find the smartest and cheapest ways to fly. It goes beyond traditional flight search by uncovering hidden routes, flexible dates, split tickets, and alternative airports to save you money. JetGenius turns complex travel planning into clear, actionable recommendations — so you book better flights, faster and cheaper."
         }
       },
       blog: { title: "Blog" },
       contact: {
         title: "Contact", formTitle: "Contact Form",
-        fullname: "Full name", email: "Email address", message: "Your Message", send: "Send Message"
+        fullname: "Full name", email: "Email address", message: "Your Message", send: "Send Message",
+        introTitle: "Let's Build Something Great Together",
+        introText: "Whether you have a project idea, need technical leadership, or just want to discuss the latest in AI and software engineering, I’m always open to new opportunities.",
+        whyTitle: "Why Reach Out?",
+        reason1: { title: "Scalable Architecture", text: "Expertise in designing robust systems using .NET, Azure, and Microservices." },
+        reason2: { title: "Technical Leadership", text: "Guiding teams, improving dev culture, and delivering high-impact products." },
+        reason3: { title: "Product-Minded Development", text: "I don't just write code; I focus on solving real business problems efficiently." }
       }
     },
     it: {
@@ -310,18 +316,24 @@ if (btn) btn.addEventListener('click', () => setTheme(root.getAttribute('data-th
         title: "Progetti",
         status: { live: "Live", wip: "In Sviluppo", beta: "Beta", comingSoon: "Prossimamente" },
         repovate: {
-          title: "Repovate.com",
-          description: "Analisi AI del repository e correzione automatica dei bug"
+          title: "Repovate.com (Analisi AI del repository e correzione automatica dei bug)",
+          description: "Repository AI Analysis & Automated Bug Fix è uno strumento basato su intelligenza artificiale che analizza il tuo codebase per individuare bug, problemi di sicurezza e criticità di performance — e genera automaticamente le relative correzioni. Si integra con il tuo flusso di lavoro Git per mantenere il codice pulito, sicuro e pronto per la produzione con il minimo sforzo."
         },
         jetgenius: {
-          title: "JetGenius",
-          description: "Una soluzione innovativa attualmente in sviluppo. Maggiori dettagli saranno disponibili con l'evoluzione del progetto."
+          title: "JetGenius (AI-powered travel assistant)",
+          description: "JetGenius è un assistente di viaggio basato su intelligenza artificiale che ti aiuta a trovare i modi più intelligenti ed economici per volare. Va oltre la ricerca tradizionale dei voli, scoprendo rotte nascoste, date flessibili, biglietti spezzati e aeroporti alternativi per farti risparmiare. JetGenius trasforma una pianificazione di viaggio complessa in raccomandazioni chiare e concrete — così puoi prenotare voli migliori, più velocemente e spendendo meno."
         }
       },
       blog: { title: "Blog" },
       contact: {
         title: "Contatti", formTitle: "Form di contatto",
-        fullname: "Nome e cognome", email: "Indirizzo email", message: "Il tuo messaggio", send: "Invia messaggio"
+        fullname: "Nome e cognome", email: "Indirizzo email", message: "Il tuo messaggio", send: "Invia messaggio",
+        introTitle: "Costruiamo Qualcosa di Grande Insieme",
+        introText: "Che tu abbia un'idea progettuale, necessiti di leadership tecnica o voglia semplicemente discutere le ultime novità in AI e ingegneria del software, sono sempre aperto a nuove opportunità.",
+        whyTitle: "Perché Contattarmi?",
+        reason1: { title: "Architetture Scalabili", text: "Esperienza nella progettazione di sistemi robusti utilizzando .NET, Azure e Microservizi." },
+        reason2: { title: "Leadership Tecnica", text: "Guida dei team, miglioramento della cultura dev e rilascio di prodotti ad alto impatto." },
+        reason3: { title: "Sviluppo Orientato al Prodotto", text: "Non scrivo solo codice; mi concentro sulla risoluzione efficiente di problemi di business reali." }
       }
     }
   };
