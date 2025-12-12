@@ -127,7 +127,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
 // Simple mailto contact
 const contactForm = document.getElementById("contact-form");
 if (contactForm) {
-  contactForm.addEventListener("submit", function(e) {
+  contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
     const name = encodeURIComponent(document.getElementById("fullname").value);
     const email = encodeURIComponent(document.getElementById("email").value);
@@ -150,13 +150,13 @@ document.documentElement.setAttribute('data-theme', theme);
 const root = document.documentElement;
 const btn = document.getElementById('theme-toggle');
 const icon = document.getElementById('theme-icon');
-function setTheme(t){ 
-  root.setAttribute('data-theme', t); 
-  localStorage.setItem('theme', t); 
-  if (icon) icon.setAttribute('name', t==='dark'?'sunny-outline':'moon-outline'); 
+function setTheme(t) {
+  root.setAttribute('data-theme', t);
+  localStorage.setItem('theme', t);
+  if (icon) icon.setAttribute('name', t === 'dark' ? 'sunny-outline' : 'moon-outline');
 }
 setTheme(root.getAttribute('data-theme') || 'light');
-if (btn) btn.addEventListener('click', ()=> setTheme(root.getAttribute('data-theme')==='dark'?'light':'dark'));
+if (btn) btn.addEventListener('click', () => setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'));
 
 // =====================
 // i18n module (no-CORS local fallback)
@@ -174,7 +174,7 @@ if (btn) btn.addEventListener('click', ()=> setTheme(root.getAttribute('data-the
   const embeddedTranslations = {
     en: {
       docTitle: "Hussein Zayat — Backend Consultant & Technical Lead",
-      nav: { about: "About", resume: "Resume", contact: "Contact" },
+      nav: { about: "About", resume: "Resume", projects: "Projects", blog: "Blog", contact: "Contact" },
       sidebar: {
         role: "Backend Consultant <br> & Technical Lead (.NET • Azure)",
         email: "Email", phone: "Phone", location: "Location", locationValue: "Turin, Italy"
@@ -202,6 +202,19 @@ if (btn) btn.addEventListener('click', ()=> setTheme(root.getAttribute('data-the
         cicd: "CI/CD (Azure DevOps, Pipelines, Docker)",
         langs: "Languages & Frameworks: Python, Kotlin, Java, JavaScript, EF, ABP, Flutter, OData"
       },
+      projects: {
+        title: "Projects",
+        status: { live: "Live", wip: "Work in Progress", beta: "Beta", comingSoon: "Coming Soon" },
+        repovate: {
+          title: "Repovate.com",
+          description: "Repository AI analysis and automated bug fix"
+        },
+        jetgenius: {
+          title: "JetGenius",
+          description: "An innovative solution currently under development. More details coming soon as the project evolves."
+        }
+      },
+      blog: { title: "Blog" },
       contact: {
         title: "Contact", formTitle: "Contact Form",
         fullname: "Full name", email: "Email address", message: "Your Message", send: "Send Message"
@@ -209,7 +222,7 @@ if (btn) btn.addEventListener('click', ()=> setTheme(root.getAttribute('data-the
     },
     it: {
       docTitle: "Hussein Zayat — Consulente Backend & Technical Lead",
-      nav: { about: "Chi sono", resume: "Curriculum", contact: "Contatti" },
+      nav: { about: "Chi sono", resume: "Curriculum", projects: "Progetti", blog: "Blog", contact: "Contatti" },
       sidebar: {
         role: "Consulente Backend <br> & Technical Lead (.NET • Azure)",
         email: "Email", phone: "Telefono", location: "Località", locationValue: "Torino, Italia"
@@ -237,6 +250,19 @@ if (btn) btn.addEventListener('click', ()=> setTheme(root.getAttribute('data-the
         cicd: "CI/CD (Azure DevOps, Pipelines, Docker)",
         langs: "Linguaggi & Framework: Python, Kotlin, Java, JavaScript, EF, ABP, Flutter, OData"
       },
+      projects: {
+        title: "Progetti",
+        status: { live: "Live", wip: "In Sviluppo", beta: "Beta", comingSoon: "Prossimamente" },
+        repovate: {
+          title: "Repovate.com",
+          description: "Analisi AI del repository e correzione automatica dei bug"
+        },
+        jetgenius: {
+          title: "JetGenius",
+          description: "Una soluzione innovativa attualmente in sviluppo. Maggiori dettagli saranno disponibili con l'evoluzione del progetto."
+        }
+      },
+      blog: { title: "Blog" },
       contact: {
         title: "Contatti", formTitle: "Form di contatto",
         fullname: "Nome e cognome", email: "Indirizzo email", message: "Il tuo messaggio", send: "Invia messaggio"
@@ -249,7 +275,7 @@ if (btn) btn.addEventListener('click', ()=> setTheme(root.getAttribute('data-the
   function detectLang() {
     const stored = localStorage.getItem('lang');
     if (stored && SUPPORTED.includes(stored)) return stored;
-    const navLang = (navigator.language || '').slice(0,2).toLowerCase();
+    const navLang = (navigator.language || '').slice(0, 2).toLowerCase();
     return SUPPORTED.includes(navLang) ? navLang : DEFAULT_LANG;
   }
 
@@ -260,7 +286,7 @@ if (btn) btn.addEventListener('click', ()=> setTheme(root.getAttribute('data-the
       url.searchParams.set('hl', lang === 'it' ? 'it' : 'en');
       url.searchParams.set('region', lang === 'it' ? 'IT' : 'US');
       mapIframe.src = url.toString();
-    } catch {}
+    } catch { }
   }
 
   function getFromDict(lang, key) {
