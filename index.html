@@ -84,6 +84,17 @@
             </a>
           </li>
         </ul>
+
+        <div class="separator"></div>
+
+        <div style="text-align: center; margin-top: 15px;">
+          <button data-nav-link data-nav-target="privacy-policy"
+            style="color: var(--light-gray-70); font-size: 12px; cursor: pointer; display: inline-block; transition: color 0.25s ease;"
+            onmouseover="this.style.color='var(--orange-yellow-crayola)'"
+            onmouseout="this.style.color='var(--light-gray-70)'">
+            <span data-i18n="privacy.link">Privacy Policy</span>
+          </button>
+        </div>
       </div>
     </aside>
 
@@ -454,6 +465,30 @@
             </div>
           </div>
 
+          <!-- Project 3: HappyDots -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="./assets/images/projects/happydots.png" alt="HappyDots: Daily Mood Journal" loading="lazy">
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3 class="project-title">
+                  <span data-i18n="projects.happydots.title">HappyDots: Daily Mood Journal</span>
+                </h3>
+                <span class="project-status coming-soon" data-i18n="projects.status.comingSoon">Coming Soon</span>
+              </div>
+              <p class="project-description" data-i18n="projects.happydots.description">
+                HappyDots is a mobile application for iOS and Android designed to track your daily mood. It analyzes
+                your patterns to identify what improves or worsens your well-being, providing personalized suggestions
+                to help you feel your best.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">Mobile</span>
+              </div>
+            </div>
+          </div>
+
         </section>
       </article>
 
@@ -470,31 +505,59 @@
             <li class="blog-item project-item active" data-filter-item data-category="web development">
               <div class="blog-card project-card">
                 <div class="project-image">
-                  <a href="#" onclick="openBlogModal('vibe_coding'); return false;">
-                    <img src="./assets/images/vibe-coding-blog.png" alt="Vibe Coding" loading="lazy">
+                  <a href="#" onclick="openBlogModal('repovate_security'); return false;">
+                    <img src="./assets/images/repovate-security-blog.png" alt="AI Code Security with Repovate"
+                      loading="lazy">
                   </a>
                 </div>
                 <div class="project-content">
                   <div class="project-header">
                     <h3 class="project-title">
-                      <a href="#" onclick="openBlogModal('vibe_coding'); return false;">Vibe Coding: Fast Prototypes,
-                        Fragile Foundations</a>
+                      <a href="#" onclick="openBlogModal('repovate_security'); return false;">AI-Generated Code: Fast
+                        but Not Always Secure</a>
                     </h3>
-                    <time class="publish-date" datetime="2025-10-02">Oct 2, 2025</time>
+                    <time class="publish-date" datetime="2026-01-16">Jan 16, 2026</time>
                   </div>
                   <p class="project-description">
-                    Vibe coding is great for exploring ideas fast. But speed without structure often turns into tech
-                    debt.
-                    Here’s what I learned about balancing rapid prototyping with solid engineering practices.
+                    AI tools can generate code that works — but often introduce security vulnerabilities. The solution?
+                    Use AI against AI to detect, fix, and protect your codebase automatically.
                   </p>
-                  <a href="#" class="blog-read-more" onclick="openBlogModal('vibe_coding'); return false;">Read more
-                    →</a>
+                  <a href="#" class="blog-read-more" onclick="openBlogModal('repovate_security'); return false;">Read
+                    more →</a>
                 </div>
               </div>
             </li>
 
 
             <!-- Blog post 2 -->
+            <li class="blog-item project-item active" data-filter-item data-category="web development">
+              <div class="blog-card project-card">
+                <div class="project-image">
+                  <a href="#" onclick="openBlogModal('google_antigravity'); return false;">
+                    <img src="./assets/images/google-antigravity-blog.png" alt="Google Antigravity" loading="lazy">
+                  </a>
+                </div>
+                <div class="project-content">
+                  <div class="project-header">
+                    <h3 class="project-title">
+                      <a href="#" onclick="openBlogModal('google_antigravity'); return false;">Impressed by Google
+                        Antigravity: A Developer's Perspective</a>
+                    </h3>
+                    <time class="publish-date" datetime="2025-12-12">Dec 12, 2025</time>
+                  </div>
+                  <p class="project-description">
+                    I try a lot of AI tools for development, but Google Antigravity is the first one that genuinely made
+                    me pause and rethink how AI fits into my daily workflow.
+                    It feels less like a tool that responds to prompts and more like a system that understands intent.
+                  </p>
+                  <a href="#" class="blog-read-more" onclick="openBlogModal('google_antigravity'); return false;">Read
+                    more →</a>
+                </div>
+              </div>
+            </li>
+
+            <!-- Blog post 3 -->
+
             <li class="blog-item project-item active" data-filter-item data-category="web development">
               <div class="blog-card project-card">
                 <div class="project-image">
@@ -521,32 +584,34 @@
               </div>
             </li>
 
-            <!-- Blog post 3 -->
+
+            <!-- Blog post 4 -->
             <li class="blog-item project-item active" data-filter-item data-category="web development">
               <div class="blog-card project-card">
                 <div class="project-image">
-                  <a href="#" onclick="openBlogModal('google_antigravity'); return false;">
-                    <img src="./assets/images/google-antigravity-blog.png" alt="Google Antigravity" loading="lazy">
+                  <a href="#" onclick="openBlogModal('vibe_coding'); return false;">
+                    <img src="./assets/images/vibe-coding-blog.png" alt="Vibe Coding" loading="lazy">
                   </a>
                 </div>
                 <div class="project-content">
                   <div class="project-header">
                     <h3 class="project-title">
-                      <a href="#" onclick="openBlogModal('google_antigravity'); return false;">Impressed by Google
-                        Antigravity: A Developer’s Perspective</a>
+                      <a href="#" onclick="openBlogModal('vibe_coding'); return false;">Vibe Coding: Fast Prototypes,
+                        Fragile Foundations</a>
                     </h3>
-                    <time class="publish-date" datetime="2025-12-12">Dec 12, 2025</time>
+                    <time class="publish-date" datetime="2025-10-02">Oct 2, 2025</time>
                   </div>
                   <p class="project-description">
-                    I try a lot of AI tools for development, but Google Antigravity is the first one that genuinely made
-                    me pause and rethink how AI fits into my daily workflow.
-                    It feels less like a tool that responds to prompts and more like a system that understands intent.
+                    Vibe coding is great for exploring ideas fast. But speed without structure often turns into tech
+                    debt.
+                    Here’s what I learned about balancing rapid prototyping with solid engineering practices.
                   </p>
-                  <a href="#" class="blog-read-more" onclick="openBlogModal('google_antigravity'); return false;">Read
-                    more →</a>
+                  <a href="#" class="blog-read-more" onclick="openBlogModal('vibe_coding'); return false;">Read more
+                    →</a>
                 </div>
               </div>
             </li>
+
 
           </ul>
 
@@ -736,6 +801,84 @@
               </div>
             </div>
           </div>
+
+          <div id="repovate_security" class="blog-modal">
+            <div class="blog-modal-content">
+              <span class="close-btn" onclick="closeBlogModal('repovate_security')">&times;</span>
+              <figure class="modal-banner-box">
+                <img src="./assets/images/repovate-security-blog.png" alt="AI Code Security">
+              </figure>
+              <h2>AI-Generated Code: Fast but Not Always Secure</h2>
+              <p class="modal-meta">Jan 16, 2026 · 3 min read</p>
+              <hr class="modal-divider">
+
+              <div class="modal-body">
+                <p>
+                  AI-generated code is fast… but not always secure.
+                </p>
+
+                <p>
+                  Research is showing what many of us are starting to notice in real projects:
+                </p>
+
+                <h3>👉 The Problem</h3>
+                <p>
+                  AI tools can generate code that <strong>works</strong>… but often introduces security vulnerabilities:
+                </p>
+                <ul>
+                  <li>Insecure defaults</li>
+                  <li>Missing authentication</li>
+                  <li>Injection vulnerabilities</li>
+                  <li>Bad validation</li>
+                </ul>
+
+                <p>
+                  And the scary part? <strong>These issues often look "clean" and pass reviews under time
+                    pressure.</strong>
+                </p>
+
+                <h3>✅ The Solution: Use AI Against AI</h3>
+                <p>
+                  If AI can generate code, it can also:
+                </p>
+                <ul>
+                  <li>🔍 <strong>Detect vulnerabilities</strong> — automatically scan for security issues</li>
+                  <li>🛠️ <strong>Propose fixes</strong> — generate secure patches</li>
+                  <li>✅ <strong>Open PRs with secure patches + tests</strong> — integrate directly into your workflow
+                  </li>
+                </ul>
+
+                <h3>Why This Matters</h3>
+                <p>
+                  Because <strong>security can't stay a manual checklist</strong>.
+                </p>
+                <p>
+                  As teams move faster with AI-generated code, we need automated security layers that move just as fast.
+                  Manual code reviews are essential, but they can't catch everything — especially when deadlines are
+                  tight.
+                </p>
+
+                <h3>🤖 The Future of Secure Development</h3>
+                <p>
+                  <strong>AI should not only write code — it should protect it.</strong>
+                </p>
+                <p>
+                  Tools like <a href="https://repovate.com" target="_blank" rel="noopener"><strong>Repovate</strong></a>
+                  are already making this possible by analyzing codebases, detecting security flaws, and automatically
+                  generating secure fixes. This is DevSecOps at the speed of AI.
+                </p>
+
+                <p>
+                  The real question isn't whether AI will write more code — it's whether we'll let it write
+                  <em>insecure</em> code.
+                </p>
+
+                <br>
+                <p><strong>Tags:</strong> #AI #CyberSecurity #DevSecOps #AppSec #SoftwareEngineering #Automation
+                  #Repovate</p>
+              </div>
+            </div>
+          </div>
         </section>
       </article>
 
@@ -788,6 +931,28 @@
 
 
 
+        <section class="booking-section">
+          <h3 class="h3 form-title" data-i18n="booking.title">Book a Meeting</h3>
+          <p class="contact-text" data-i18n="booking.text">
+            Schedule a free 15-minute consultation to discuss your project or clarify your needs.
+          </p>
+
+          <div class="booking-container">
+            <!-- Calendly link widget begin -->
+            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+            <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+            <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/husseinzayat10'});return false;"
+              class="form-btn booking-btn">
+              <ion-icon name="calendar-outline"></ion-icon>
+              <span data-i18n="booking.button">Schedule a Date</span>
+            </a>
+            <!-- Calendly link widget end -->
+          </div>
+        </section>
+
+        <div class="separator"></div>
+
+
         <section class="contact-form">
           <h3 class="h3 form-title" data-i18n="contact.formTitle">Contact Form</h3>
 
@@ -806,6 +971,53 @@
               <span data-i18n="contact.send">Send Message</span>
             </button>
           </form>
+        </section>
+      </article>
+
+      <!-- #PRIVACY POLICY -->
+      <article class="privacy-policy" data-page="privacy-policy">
+        <header>
+          <h2 class="h2 article-title" data-i18n="privacy.title">Privacy Policy</h2>
+        </header>
+
+        <section class="privacy-text"
+          style="color: var(--light-gray); font-size: var(--fs-6); font-weight: var(--fw-300); line-height: 1.6;">
+          <p data-i18n="privacy.intro">
+            This Privacy Policy describes how your personal information is collected, used, and shared when you visit or
+            contact me through this website.
+          </p>
+          <br>
+
+          <h3 class="h3" style="color: var(--white-1); margin-bottom: 10px;" data-i18n="privacy.collection">Information
+            Collection</h3>
+          <p data-i18n="privacy.collectionText">
+            I collect information you provide directly to me, such as when you send a message through the contact form
+            or
+            book a meeting. This may include your name, email address, and any other details you choose to provide.
+          </p>
+          <br>
+
+          <h3 class="h3" style="color: var(--white-1); margin-bottom: 10px;" data-i18n="privacy.usage">How I Use Your
+            Information</h3>
+          <p data-i18n="privacy.usageText">
+            I use the information I collect to communicate with you, respond to your inquiries, and schedule meetings. I
+            do not sell or share your personal information with third parties for marketing purposes.
+          </p>
+          <br>
+
+          <h3 class="h3" style="color: var(--white-1); margin-bottom: 10px;" data-i18n="privacy.analytics">Analytics
+          </h3>
+          <p data-i18n="privacy.analyticsText">
+            This website may use basic analytics tools to understand visitor trends. These tools collect anonymous data
+            such as browser type, referring site, and the date/time of each visitor request.
+          </p>
+          <br>
+
+          <h3 class="h3" style="color: var(--white-1); margin-bottom: 10px;" data-i18n="privacy.contact">Contact</h3>
+          <p data-i18n="privacy.contactText">
+            For more information about my privacy practices, or if you have questions, please contact me using the
+            details provided in the sidebar or the contact form.
+          </p>
         </section>
       </article>
 

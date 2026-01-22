@@ -228,7 +228,7 @@
 
 .blog-read-more {
   display: inline-block;
-  margin-top: 15px;
+  margin-top: auto;
   color: var(--orange-yellow-crayola);
   font-size: var(--fs-6);
   font-weight: var(--fw-500);
@@ -504,7 +504,7 @@ main {
 }
 
 .sidebar.active {
-  max-height: 650px;
+  max-height: 800px;
 }
 
 .sidebar-info {
@@ -1447,6 +1447,9 @@ main {
   z-index: 1;
   transition: all 0.3s ease;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .project-card::before {
@@ -1479,6 +1482,7 @@ main {
   border-radius: 20px 20px 0 0;
   background: linear-gradient(135deg, var(--eerie-black-1), var(--eerie-black-2));
   border-bottom: 1px solid var(--jet);
+  flex-shrink: 0;
 }
 
 .project-image::after {
@@ -1512,6 +1516,9 @@ main {
 /* Project Content Wrapper */
 .project-content {
   padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .project-header {
@@ -1960,7 +1967,7 @@ textarea.form-input::-webkit-resizer {
   }
 
   .sidebar.active {
-    max-height: 650px;
+    max-height: 800px;
   }
 
   .sidebar-info {

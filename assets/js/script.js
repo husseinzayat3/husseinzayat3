@@ -112,23 +112,62 @@ function closeBlogModal(id) {
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
+// Function to activate a specific page and nav link
+function setActivePage(target) {
+  // Default to 'about' if target is invalid or empty
+  if (!target) target = 'about';
+
+  // Verify target validity
+  let isValidTarget = false;
+  for (let i = 0; i < pages.length; i++) {
+    if (pages[i].dataset.page === target) {
+      isValidTarget = true;
+      break;
+    }
+  }
+  if (!isValidTarget) target = 'about';
+
+  // 1. Switch Active Page
+  for (let j = 0; j < pages.length; j++) {
+    if (pages[j].dataset.page === target) {
+      pages[j].classList.add("active");
+      window.scrollTo(0, 0);
+    } else {
+      pages[j].classList.remove("active");
+    }
+  }
+
+  // 2. Switch Active Nav Link
+  for (let k = 0; k < navigationLinks.length; k++) {
+    if (navigationLinks[k].dataset.navTarget === target) {
+      navigationLinks[k].classList.add("active");
+    } else {
+      navigationLinks[k].classList.remove("active");
+    }
+  }
+}
+
+// Event listener for nav links
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function () {
-    const target = this.getAttribute('data-nav-target'); // "about" | "resume" | "contact"
-    for (let j = 0; j < pages.length; j++) {
-      const pageKey = pages[j].dataset.page; // "about" | "resume" | "contact"
-      if (pageKey === target) {
-        pages[j].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        pages[j].classList.remove("active");
-        // Remove active from the nav link that corresponds to this page index if exists
-        if (navigationLinks[j]) navigationLinks[j].classList.remove("active");
-      }
-    }
+    const target = this.dataset.navTarget; // "about" | "resume" | "contact" | "privacy-policy"
+
+    // Changing hash triggers hashchange event, which calls setActivePage
+    window.location.hash = target;
   });
 }
+
+// Handle browser navigation (back/forward) and manual hash changes
+window.addEventListener('hashchange', () => {
+  const target = window.location.hash.replace('#', '');
+  setActivePage(target);
+});
+
+// Handle initial load
+window.addEventListener('DOMContentLoaded', () => {
+  const target = window.location.hash.replace('#', '');
+  setActivePage(target);
+});
 
 // =====================
 // EmailJS Contact Form
@@ -268,7 +307,16 @@ if (btn) btn.addEventListener('click', () => setTheme(root.getAttribute('data-th
         jetgenius: {
           title: "JetGenius (AI-powered travel assistant)",
           description: "JetGenius is an AI-powered travel assistant that helps you find the smartest and cheapest ways to fly. It goes beyond traditional flight search by uncovering hidden routes, flexible dates, split tickets, and alternative airports to save you money. JetGenius turns complex travel planning into clear, actionable recommendations — so you book better flights, faster and cheaper."
+        },
+        happydots: {
+          title: "HappyDots: Daily Mood Journal",
+          description: "HappyDots is a mobile application for iOS and Android designed to track your daily mood. It analyzes your patterns to identify what improves or worsens your well-being, providing personalized suggestions to help you feel your best."
         }
+      },
+      booking: {
+        title: "Book a Meeting",
+        text: "Schedule a free 15-minute consultation to discuss your project or clarify your needs.",
+        button: "Schedule a Date"
       },
       blog: { title: "Blog" },
       contact: {
@@ -280,6 +328,19 @@ if (btn) btn.addEventListener('click', () => setTheme(root.getAttribute('data-th
         reason1: { title: "Scalable Architecture", text: "Expertise in designing robust systems using .NET, Azure, and Microservices." },
         reason2: { title: "Technical Leadership", text: "Guiding teams, improving dev culture, and delivering high-impact products." },
         reason3: { title: "Product-Minded Development", text: "I don't just write code; I focus on solving real business problems efficiently." }
+      },
+      privacy: {
+        link: "Privacy Policy",
+        title: "Privacy Policy",
+        intro: "This Privacy Policy describes how your personal information is collected, used, and shared when you visit or contact me through this website.",
+        collection: "Information Collection",
+        collectionText: "I collect information you provide directly to me, such as when you send a message through the contact form or book a meeting. This may include your name, email address, and any other details you choose to provide.",
+        usage: "How I Use Your Information",
+        usageText: "I use the information I collect to communicate with you, respond to your inquiries, and schedule meetings. I do not sell or share your personal information with third parties for marketing purposes.",
+        analytics: "Analytics",
+        analyticsText: "This website may use basic analytics tools to understand visitor trends. These tools collect anonymous data such as browser type, referring site, and the date/time of each visitor request.",
+        contact: "Contact",
+        contactText: "For more information about my privacy practices, or if you have questions, please contact me using the details provided in the sidebar or the contact form."
       }
     },
     it: {
@@ -322,7 +383,16 @@ if (btn) btn.addEventListener('click', () => setTheme(root.getAttribute('data-th
         jetgenius: {
           title: "JetGenius (AI-powered travel assistant)",
           description: "JetGenius è un assistente di viaggio basato su intelligenza artificiale che ti aiuta a trovare i modi più intelligenti ed economici per volare. Va oltre la ricerca tradizionale dei voli, scoprendo rotte nascoste, date flessibili, biglietti spezzati e aeroporti alternativi per farti risparmiare. JetGenius trasforma una pianificazione di viaggio complessa in raccomandazioni chiare e concrete — così puoi prenotare voli migliori, più velocemente e spendendo meno."
+        },
+        happydots: {
+          title: "HappyDots: Diario dell'Umore",
+          description: "HappyDots è un'applicazione mobile per iOS e Android progettata per tracciare il tuo umore quotidiano. Analizza i tuoi schemi per identificare cosa migliora o peggiora il tuo benessere, fornendo suggerimenti personalizzati per aiutarti a sentirti meglio."
         }
+      },
+      booking: {
+        title: "Prenota una Call",
+        text: "Prenota una consulenza gratuita di 15 minuti per discutere del tuo progetto o chiarire le tue esigenze.",
+        button: "Prenota una data"
       },
       blog: { title: "Blog" },
       contact: {
@@ -334,6 +404,19 @@ if (btn) btn.addEventListener('click', () => setTheme(root.getAttribute('data-th
         reason1: { title: "Architetture Scalabili", text: "Esperienza nella progettazione di sistemi robusti utilizzando .NET, Azure e Microservizi." },
         reason2: { title: "Leadership Tecnica", text: "Guida dei team, miglioramento della cultura dev e rilascio di prodotti ad alto impatto." },
         reason3: { title: "Sviluppo Orientato al Prodotto", text: "Non scrivo solo codice; mi concentro sulla risoluzione efficiente di problemi di business reali." }
+      },
+      privacy: {
+        link: "Privacy Policy",
+        title: "Privacy Policy",
+        intro: "Questa Privacy Policy descrive come le tue informazioni personali vengono raccolte, utilizzate e condivise quando visiti o mi contatti tramite questo sito web.",
+        collection: "Raccolta delle Informazioni",
+        collectionText: "Raccolgo le informazioni che fornisci direttamente a me, ad esempio quando invii un messaggio tramite il modulo di contatto o prenoti una riunione. Questo può includere il tuo nome, indirizzo email e qualsiasi altro dettaglio tu scelga di fornire.",
+        usage: "Come Utilizzo le Tue Informazioni",
+        usageText: "Utilizzo le informazioni raccolte per comunicare con te, rispondere alle tue richieste e pianificare incontri. Non vendo né condivido le tue informazioni personali con terze parti per scopi di marketing.",
+        analytics: "Analytics",
+        analyticsText: "Questo sito web può utilizzare strumenti di analisi di base per comprendere le tendenze dei visitatori. Questi strumenti raccolgono dati anonimi come il tipo di browser, il sito di riferimento e la data/ora di ogni richiesta del visitatore.",
+        contact: "Contatti",
+        contactText: "Per ulteriori informazioni sulle mie pratiche sulla privacy, o se hai domande, contattami utilizzando i dettagli forniti nella barra laterale o nel modulo di contatto."
       }
     }
   };
