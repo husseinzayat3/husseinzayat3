@@ -1524,9 +1524,15 @@ main {
 .project-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: 15px;
   gap: 15px;
+  flex-wrap: wrap;
+}
+
+.project-title {
+  flex: 1 1 200px;
+  min-width: 0;
 }
 
 .publish-date {
@@ -1555,7 +1561,9 @@ main {
 }
 
 .project-status {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   padding: 6px 14px;
   border-radius: 8px;
   font-size: var(--fs-8);
@@ -1564,9 +1572,29 @@ main {
   letter-spacing: 0.5px;
   white-space: nowrap;
   flex-shrink: 0;
+  max-width: 100%;
+  text-decoration: none !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.project-status.live {
+.project-status:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+@media (max-width: 450px) {
+  .project-status {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+}
+
+.project-status ion-icon {
+  font-size: 1.2em;
+}
+
+.project-status.live,
+.project-status.online {
   background: linear-gradient(135deg, hsl(142, 76%, 36%), hsl(142, 71%, 45%));
   color: hsl(0, 0%, 100%);
   box-shadow: 0 4px 12px hsla(142, 76%, 36%, 0.3);

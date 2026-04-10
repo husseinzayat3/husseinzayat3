@@ -62,6 +62,22 @@
         "email": "Email address",
         "message": "Your Message",
         "send": "Send Message"
+      },
+      "projects": {
+        "status": {
+          "online": "Online"
+        },
+        "speedtap": {
+          "title": "SpeedTap Arena",
+          "description": "SpeedTap Arena is a competitive mobile game built with Flutter and Firebase Functions. Challenge your friends in real-time reflex battles, climb the global leaderboard, and prove who has the fastest fingers in the arena.",
+          "appleStore": "Download on the App Store",
+          "googlePlay": "Get it on Google Play"
+        },
+        "happydots": {
+          "title": "HappyDots: Daily Mood Journal",
+          "appleStore": "Download on the App Store",
+          "googlePlay": "Get it on Google Play"
+        }
       }
     },
     "it": {
@@ -127,6 +143,22 @@
         "email": "Indirizzo email",
         "message": "Il tuo messaggio",
         "send": "Invia messaggio"
+      },
+      "projects": {
+        "status": {
+          "online": "Online"
+        },
+        "speedtap": {
+          "title": "SpeedTap Arena",
+          "description": "SpeedTap Arena è un gioco mobile competitivo realizzato con Flutter e Firebase Functions. Sfida i tuoi amici in battaglie di riflessi in tempo reale, scala la classifica globale e dimostra di avere le dita più veloci dell'arena.",
+          "appleStore": "Scarica su App Store",
+          "googlePlay": "Disponibile su Google Play"
+        },
+        "happydots": {
+          "title": "HappyDots: Diario dell'Umore",
+          "appleStore": "Scarica su App Store",
+          "googlePlay": "Disponibile su Google Play"
+        }
       }
     }
   }

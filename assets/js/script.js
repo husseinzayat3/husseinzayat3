@@ -167,6 +167,74 @@ window.addEventListener('hashchange', () => {
 window.addEventListener('DOMContentLoaded', () => {
   const target = window.location.hash.replace('#', '');
   setActivePage(target);
+
+    // Store Link Logic for HappyDots
+    const happyDotsStoreLink = document.getElementById('happydots-store-link');
+    if (happyDotsStoreLink) {
+      const userAgent = navigator.userAgent.toLowerCase();
+      const isApple = /iphone|ipad|ipod|macintosh|mac os x/.test(userAgent);
+
+      // Default (Android/Windows/Others) -> Play Store
+      let storeUrl = "https://play.google.com/store/apps/details?id=com.moodtracker.daily.mood_tracker";
+      let iconName = "logo-google-playstore"; // Ionicons v5+
+      let i18nKey = "projects.happydots.googlePlay";
+      let defaultText = "Get it on Google Play";
+
+      if (isApple) {
+        // Apple -> App Store
+        storeUrl = "https://apps.apple.com/app/happydots-daily-mood-journal/id6757766055";
+        iconName = "logo-apple";
+        i18nKey = "projects.happydots.appleStore";
+        defaultText = "Download on the App Store";
+      }
+
+      happyDotsStoreLink.href = storeUrl;
+
+      // Update Icon
+      const icon = happyDotsStoreLink.querySelector('ion-icon');
+      if (icon) icon.setAttribute('name', iconName);
+
+      // Update Text & Translation Key
+      const span = happyDotsStoreLink.querySelector('span');
+      if (span) {
+        span.textContent = defaultText;
+        span.setAttribute('data-i18n', i18nKey);
+      }
+    }
+
+    // Store Link Logic for SpeedTap Arena
+    const speedTapStoreLink = document.getElementById('speedtap-store-link');
+    if (speedTapStoreLink) {
+      const userAgent = navigator.userAgent.toLowerCase();
+      const isApple = /iphone|ipad|ipod|macintosh|mac os x/.test(userAgent);
+
+      // Default (Android/Windows/Others) -> Play Store
+      let storeUrl = "https://play.google.com/store/apps/details?id=com.husseinzayat.speedtaparena";
+      let iconName = "logo-google-playstore";
+      let i18nKey = "projects.speedtap.googlePlay";
+      let defaultText = "Get it on Google Play";
+
+      if (isApple) {
+        // Apple -> App Store
+        storeUrl = "https://apps.apple.com/us/app/speedtap-arena/id6760648659";
+        iconName = "logo-apple";
+        i18nKey = "projects.speedtap.appleStore";
+        defaultText = "Download on the App Store";
+      }
+
+      speedTapStoreLink.href = storeUrl;
+
+      // Update Icon
+      const icon = speedTapStoreLink.querySelector('ion-icon');
+      if (icon) icon.setAttribute('name', iconName);
+
+      // Update Text & Translation Key
+      const span = speedTapStoreLink.querySelector('span');
+      if (span) {
+        span.textContent = defaultText;
+        span.setAttribute('data-i18n', i18nKey);
+      }
+    }
 });
 
 // =====================
@@ -299,7 +367,7 @@ if (btn) btn.addEventListener('click', () => setTheme(root.getAttribute('data-th
       },
       projects: {
         title: "Projects",
-        status: { live: "Live", wip: "Work in Progress", beta: "Beta", comingSoon: "Coming Soon" },
+        status: { live: "Live", wip: "Work in Progress", beta: "Beta", comingSoon: "Coming Soon", online: "Online" },
         repovate: {
           title: "Repovate.com (Repository AI Analysis & Automated Bug Fix)",
           description: "Repository AI Analysis & Automated Bug Fix is an AI-powered tool that analyzes your codebase to detect bugs, security issues, and performance problems — and automatically generates fixes. It integrates with your Git workflow to keep code clean, secure, and production-ready with minimal effort."
@@ -310,7 +378,15 @@ if (btn) btn.addEventListener('click', () => setTheme(root.getAttribute('data-th
         },
         happydots: {
           title: "HappyDots: Daily Mood Journal",
-          description: "HappyDots is a mobile application for iOS and Android designed to track your daily mood. It analyzes your patterns to identify what improves or worsens your well-being, providing personalized suggestions to help you feel your best."
+          description: "HappyDots is a mobile application for iOS and Android designed to track your daily mood. It analyzes your patterns to identify what improves or worsens your well-being, providing personalized suggestions to help you feel your best.",
+          appleStore: "Download on the App Store",
+          googlePlay: "Get it on Google Play"
+        },
+        speedtap: {
+          title: "SpeedTap Arena",
+          description: "SpeedTap Arena is a competitive mobile game built with Flutter and Firebase Functions. Challenge your friends in real-time reflex battles, climb the global leaderboard, and prove who has the fastest fingers in the arena.",
+          appleStore: "Download on the App Store",
+          googlePlay: "Get it on Google Play"
         }
       },
       booking: {
@@ -375,7 +451,7 @@ if (btn) btn.addEventListener('click', () => setTheme(root.getAttribute('data-th
       },
       projects: {
         title: "Progetti",
-        status: { live: "Live", wip: "In Sviluppo", beta: "Beta", comingSoon: "Prossimamente" },
+        status: { live: "Live", wip: "In Sviluppo", beta: "Beta", comingSoon: "Prossimamente", online: "Online" },
         repovate: {
           title: "Repovate.com (Analisi AI del repository e correzione automatica dei bug)",
           description: "Repository AI Analysis & Automated Bug Fix è uno strumento basato su intelligenza artificiale che analizza il tuo codebase per individuare bug, problemi di sicurezza e criticità di performance — e genera automaticamente le relative correzioni. Si integra con il tuo flusso di lavoro Git per mantenere il codice pulito, sicuro e pronto per la produzione con il minimo sforzo."
@@ -386,7 +462,15 @@ if (btn) btn.addEventListener('click', () => setTheme(root.getAttribute('data-th
         },
         happydots: {
           title: "HappyDots: Diario dell'Umore",
-          description: "HappyDots è un'applicazione mobile per iOS e Android progettata per tracciare il tuo umore quotidiano. Analizza i tuoi schemi per identificare cosa migliora o peggiora il tuo benessere, fornendo suggerimenti personalizzati per aiutarti a sentirti meglio."
+          description: "HappyDots è un'applicazione mobile per iOS and Android progettata per tracciare il tuo umore quotidiano. Analizza i tuoi schemi per identificare cosa migliora o peggiora il tuo benessere, fornendo suggerimenti personalizzati per aiutarti a sentirti meglio.",
+          appleStore: "Scarica su App Store",
+          googlePlay: "Disponibile su Google Play"
+        },
+        speedtap: {
+          title: "SpeedTap Arena",
+          description: "SpeedTap Arena è un gioco mobile competitivo realizzato con Flutter e Firebase Functions. Sfida i tuoi amici in battaglie di riflessi in tempo reale, scala la classifica globale e dimostra di avere le dita più veloci dell'arena.",
+          appleStore: "Scarica su App Store",
+          googlePlay: "Disponibile su Google Play"
         }
       },
       booking: {
