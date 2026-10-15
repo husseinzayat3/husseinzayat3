@@ -168,73 +168,73 @@ window.addEventListener('DOMContentLoaded', () => {
   const target = window.location.hash.replace('#', '');
   setActivePage(target);
 
-    // Store Link Logic for HappyDots
-    const happyDotsStoreLink = document.getElementById('happydots-store-link');
-    if (happyDotsStoreLink) {
-      const userAgent = navigator.userAgent.toLowerCase();
-      const isApple = /iphone|ipad|ipod|macintosh|mac os x/.test(userAgent);
+  // Store Link Logic for HappyDots
+  const happyDotsStoreLink = document.getElementById('happydots-store-link');
+  if (happyDotsStoreLink) {
+    const userAgent = navigator.userAgent.toLowerCase();
+    const isApple = /iphone|ipad|ipod|macintosh|mac os x/.test(userAgent);
 
-      // Default (Android/Windows/Others) -> Play Store
-      let storeUrl = "https://play.google.com/store/apps/details?id=com.moodtracker.daily.mood_tracker";
-      let iconName = "logo-google-playstore"; // Ionicons v5+
-      let i18nKey = "projects.happydots.googlePlay";
-      let defaultText = "Get it on Google Play";
+    // Default (Android/Windows/Others) -> Play Store
+    let storeUrl = "https://play.google.com/store/apps/details?id=com.moodtracker.daily.mood_tracker";
+    let iconName = "logo-google-playstore"; // Ionicons v5+
+    let i18nKey = "projects.happydots.googlePlay";
+    let defaultText = "Get it on Google Play";
 
-      if (isApple) {
-        // Apple -> App Store
-        storeUrl = "https://apps.apple.com/app/happydots-daily-mood-journal/id6757766055";
-        iconName = "logo-apple";
-        i18nKey = "projects.happydots.appleStore";
-        defaultText = "Download on the App Store";
-      }
-
-      happyDotsStoreLink.href = storeUrl;
-
-      // Update Icon
-      const icon = happyDotsStoreLink.querySelector('ion-icon');
-      if (icon) icon.setAttribute('name', iconName);
-
-      // Update Text & Translation Key
-      const span = happyDotsStoreLink.querySelector('span');
-      if (span) {
-        span.textContent = defaultText;
-        span.setAttribute('data-i18n', i18nKey);
-      }
+    if (isApple) {
+      // Apple -> App Store
+      storeUrl = "https://apps.apple.com/app/happydots-daily-mood-journal/id6757766055";
+      iconName = "logo-apple";
+      i18nKey = "projects.happydots.appleStore";
+      defaultText = "Download on the App Store";
     }
 
-    // Store Link Logic for SpeedTap Arena
-    const speedTapStoreLink = document.getElementById('speedtap-store-link');
-    if (speedTapStoreLink) {
-      const userAgent = navigator.userAgent.toLowerCase();
-      const isApple = /iphone|ipad|ipod|macintosh|mac os x/.test(userAgent);
+    happyDotsStoreLink.href = storeUrl;
 
-      // Default (Android/Windows/Others) -> Play Store
-      let storeUrl = "https://play.google.com/store/apps/details?id=com.husseinzayat.speedtaparena";
-      let iconName = "logo-google-playstore";
-      let i18nKey = "projects.speedtap.googlePlay";
-      let defaultText = "Get it on Google Play";
+    // Update Icon
+    const icon = happyDotsStoreLink.querySelector('ion-icon');
+    if (icon) icon.setAttribute('name', iconName);
 
-      if (isApple) {
-        // Apple -> App Store
-        storeUrl = "https://apps.apple.com/us/app/speedtap-arena/id6760648659";
-        iconName = "logo-apple";
-        i18nKey = "projects.speedtap.appleStore";
-        defaultText = "Download on the App Store";
-      }
-
-      speedTapStoreLink.href = storeUrl;
-
-      // Update Icon
-      const icon = speedTapStoreLink.querySelector('ion-icon');
-      if (icon) icon.setAttribute('name', iconName);
-
-      // Update Text & Translation Key
-      const span = speedTapStoreLink.querySelector('span');
-      if (span) {
-        span.textContent = defaultText;
-        span.setAttribute('data-i18n', i18nKey);
-      }
+    // Update Text & Translation Key
+    const span = happyDotsStoreLink.querySelector('span');
+    if (span) {
+      span.textContent = defaultText;
+      span.setAttribute('data-i18n', i18nKey);
     }
+  }
+
+  // Store Link Logic for SpeedTap Arena
+  const speedTapStoreLink = document.getElementById('speedtap-store-link');
+  if (speedTapStoreLink) {
+    const userAgent = navigator.userAgent.toLowerCase();
+    const isApple = /iphone|ipad|ipod|macintosh|mac os x/.test(userAgent);
+
+    // Default (Android/Windows/Others) -> Play Store
+    let storeUrl = "https://play.google.com/store/apps/details?id=com.hz.fasttap";
+    let iconName = "logo-google-playstore";
+    let i18nKey = "projects.speedtap.googlePlay";
+    let defaultText = "Get it on Google Play";
+
+    if (isApple) {
+      // Apple -> App Store
+      storeUrl = "https://apps.apple.com/us/app/speedtap-arena/id6760648659";
+      iconName = "logo-apple";
+      i18nKey = "projects.speedtap.appleStore";
+      defaultText = "Download on the App Store";
+    }
+
+    speedTapStoreLink.href = storeUrl;
+
+    // Update Icon
+    const icon = speedTapStoreLink.querySelector('ion-icon');
+    if (icon) icon.setAttribute('name', iconName);
+
+    // Update Text & Translation Key
+    const span = speedTapStoreLink.querySelector('span');
+    if (span) {
+      span.textContent = defaultText;
+      span.setAttribute('data-i18n', i18nKey);
+    }
+  }
 });
 
 // =====================
@@ -368,6 +368,11 @@ if (btn) btn.addEventListener('click', () => setTheme(root.getAttribute('data-th
       projects: {
         title: "Projects",
         status: { live: "Live", wip: "Work in Progress", beta: "Beta", comingSoon: "Coming Soon", online: "Online" },
+        deskforce: {
+          title: "Deskforce (Virtual Office of AI Agents)",
+          description: "Deskforce is a virtual office of AI agents. Hire a team, give the CEO agent a goal, and watch it plan, delegate, and build the work, with every employee shown live on a floorplan. Choose a different model for each employee (OpenAI, Claude, Gemini, Grok, or local models via Ollama). Approve plans and cost estimates before anything is built, undo any task with one click thanks to per-task git commits, set budgets and spending caps, and manage everything from Slack. Open source under the MIT License.",
+          download: "Download"
+        },
         repovate: {
           title: "Repovate.com (Repository AI Analysis & Automated Bug Fix)",
           description: "Repository AI Analysis & Automated Bug Fix is an AI-powered tool that analyzes your codebase to detect bugs, security issues, and performance problems — and automatically generates fixes. It integrates with your Git workflow to keep code clean, secure, and production-ready with minimal effort."
@@ -452,6 +457,11 @@ if (btn) btn.addEventListener('click', () => setTheme(root.getAttribute('data-th
       projects: {
         title: "Progetti",
         status: { live: "Live", wip: "In Sviluppo", beta: "Beta", comingSoon: "Prossimamente", online: "Online" },
+        deskforce: {
+          title: "Deskforce (Ufficio virtuale di agenti AI)",
+          description: "Deskforce è un ufficio virtuale di agenti AI. Assumi un team, assegna un obiettivo all'agente CEO e guardalo pianificare, delegare e realizzare il lavoro, con ogni dipendente visibile in tempo reale su una planimetria. Scegli un modello diverso per ogni dipendente (OpenAI, Claude, Gemini, Grok o modelli locali tramite Ollama). Approva piani e stime dei costi prima che venga realizzato qualsiasi cosa, annulla ogni attività con un clic grazie ai commit git per attività, imposta budget e limiti di spesa e gestisci tutto da Slack. Open source con licenza MIT.",
+          download: "Scarica"
+        },
         repovate: {
           title: "Repovate.com (Analisi AI del repository e correzione automatica dei bug)",
           description: "Repository AI Analysis & Automated Bug Fix è uno strumento basato su intelligenza artificiale che analizza il tuo codebase per individuare bug, problemi di sicurezza e criticità di performance — e genera automaticamente le relative correzioni. Si integra con il tuo flusso di lavoro Git per mantenere il codice pulito, sicuro e pronto per la produzione con il minimo sforzo."

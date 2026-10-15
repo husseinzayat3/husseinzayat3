@@ -409,6 +409,43 @@
 
         <section class="projects-list">
 
+          <!-- Project: Deskforce -->
+          <div class="project-card">
+            <div class="project-image">
+              <a href="https://husseinzayat3.github.io/Deskforce/" target="_blank" rel="noopener">
+                <img src="./assets/images/projects/deskforce.png" alt="Deskforce - AI Agents Virtual Office" loading="lazy">
+              </a>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3 class="project-title">
+                  <a href="https://husseinzayat3.github.io/Deskforce/" target="_blank" rel="noopener"
+                    data-i18n="projects.deskforce.title">Deskforce (Virtual Office of AI Agents)</a>
+                </h3>
+                <a href="https://github.com/husseinzayat3/Deskforce/releases/latest" target="_blank" rel="noopener"
+                  class="project-status online">
+                  <ion-icon name="download-outline"></ion-icon>
+                  <span data-i18n="projects.deskforce.download">Download</span>
+                </a>
+              </div>
+              <p class="project-description" data-i18n="projects.deskforce.description">
+                Deskforce is a virtual office of AI agents. Hire a team, give the CEO agent a goal, and watch it plan,
+                delegate, and build the work, with every employee shown live on a floorplan. Choose a different model
+                for each employee (OpenAI, Claude, Gemini, Grok, or local models via Ollama). Approve plans and cost
+                estimates before anything is built, undo any task with one click thanks to per-task git commits, set
+                budgets and spending caps, and manage everything from Slack. Open source under the MIT License.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">AI Agents</span>
+                <span class="tech-tag">LLM</span>
+                <span class="tech-tag">Ollama</span>
+                <span class="tech-tag">Git</span>
+                <span class="tech-tag">Slack</span>
+                <span class="tech-tag">Open Source</span>
+              </div>
+            </div>
+          </div>
+
           <!-- Project: SpeedTap Arena -->
           <div class="project-card">
             <div class="project-image">
@@ -535,6 +572,33 @@
 
         <section class="blog-posts">
           <ul class="blog-list projects-list"> <!-- Added projects-list class to inherit grid style -->
+
+            <!-- Blog post: Deskforce -->
+            <li class="blog-item project-item active" data-filter-item data-category="web development">
+              <div class="blog-card project-card">
+                <div class="project-image">
+                  <a href="#" onclick="openBlogModal('deskforce'); return false;">
+                    <img src="./assets/images/deskforce-blog.jpg" alt="Deskforce: a virtual office of AI agents"
+                      loading="lazy">
+                  </a>
+                </div>
+                <div class="project-content">
+                  <div class="project-header">
+                    <h3 class="project-title">
+                      <a href="#" onclick="openBlogModal('deskforce'); return false;">I Built an Office Where Every
+                        Employee Is an AI Agent</a>
+                    </h3>
+                    <time class="publish-date" datetime="2026-10-15">Oct 15, 2026</time>
+                  </div>
+                  <p class="project-description">
+                    Meet Deskforce: hire a team of AI agents, give the CEO a goal, and watch them plan, delegate and
+                    build it on a live floorplan, with every cost approved and every change one click from undo.
+                  </p>
+                  <a href="#" class="blog-read-more" onclick="openBlogModal('deskforce'); return false;">Read
+                    more →</a>
+                </div>
+              </div>
+            </li>
 
             <!-- Blog post 1 -->
             <li class="blog-item project-item active" data-filter-item data-category="web development">
@@ -833,6 +897,161 @@
 
                 <br>
                 <p><strong>Tags:</strong> #GoogleAntigravity #AI #WebDevelopment #Frontend #Productivity</p>
+              </div>
+            </div>
+          </div>
+
+          <div id="deskforce" class="blog-modal">
+            <div class="blog-modal-content">
+              <span class="close-btn" onclick="closeBlogModal('deskforce')">&times;</span>
+              <figure class="modal-banner-box">
+                <img src="./assets/images/deskforce-blog.jpg" alt="Deskforce team at work on the floorplan">
+              </figure>
+              <h2>I Built an Office Where Every Employee Is an AI Agent</h2>
+              <p class="modal-meta">Oct 15, 2026 · 5 min read</p>
+              <hr class="modal-divider">
+
+              <div class="modal-body">
+                <p>
+                  Four AI employees. One bakery landing page. About a minute of work. <strong>Total cost:
+                    $0.11.</strong>
+                </p>
+
+                <p>
+                  That was a real run of <a href="https://husseinzayat3.github.io/Deskforce/" target="_blank"
+                    rel="noopener"><strong>Deskforce</strong></a>, a project I've just released as open source. It's a
+                  virtual office of AI agents: you hire a team, give the CEO a goal, and watch the work get planned,
+                  delegated and built.
+                </p>
+
+                <h3>🤔 Why I Built It</h3>
+                <p>
+                  Multi-agent AI is everywhere right now, but using it day to day is still awkward. You usually end up
+                  with one of two things:
+                </p>
+                <ul>
+                  <li><strong>Agent frameworks</strong> (CrewAI, AutoGen, LangGraph): great libraries, but you have to
+                    write, host and debug your own code before anything useful happens.</li>
+                  <li><strong>Research projects</strong> (ChatDev, MetaGPT): fascinating to read about, but you're
+                    setting up Python environments and reading logs to find out what happened.</li>
+                </ul>
+                <p>
+                  In both cases the same questions come up: <em>What is the agent doing right now? How much will this
+                    cost? And how do I undo what it just did?</em>
+                </p>
+                <p>
+                  I wanted an app you install, add a key to, and start using, where you can actually
+                  <strong>see</strong> the work happening and stay in control of it.
+                </p>
+
+                <h3>🏢 How It Works</h3>
+                <p>
+                  Deskforce treats AI agents like a small company:
+                </p>
+                <ul>
+                  <li><strong>You give a request</strong> to your most senior employee, the CEO.</li>
+                  <li><strong>The CEO writes a plan</strong> with a cost estimate and a breakdown of who does what.</li>
+                  <li><strong>You approve it</strong>, edit it, or ask for another plan. Nothing is built before that.
+                  </li>
+                  <li><strong>Work gets delegated</strong> down the hierarchy. Juniors can only pass work further down,
+                    never back up.</li>
+                  <li><strong>Agents use tools</strong>: they read and write project files, search the web, and ask
+                    their manager (or you) when they're stuck.</li>
+                  <li><strong>Every finished task becomes a git commit</strong> in the employee's name.</li>
+                  <li><strong>The CEO reviews everything</strong> at the end, fixes gaps, and writes you a report.</li>
+                </ul>
+                <p>
+                  In the bakery example, Leo the designer worked on the layout and visuals, Sam the copywriter wrote the
+                  hero section and menu, Robo the junior dev built the contact form, and Quinn from QA checked that it
+                  worked on different screens. The finished page opens in a preview inside the app.
+                </p>
+
+                <h3>👀 You Can Watch Them Work</h3>
+                <p>
+                  This is my favourite part. Every employee is an <strong>avatar on an office floorplan</strong>, and
+                  speech bubbles show what each model is writing <em>as it writes it</em>. Next to the floorplan
+                  there's a task tree showing who's working on what, how many tokens each task used, and what it cost.
+                </p>
+                <p>
+                  Instead of scrolling through logs to understand what went wrong, you just look at the office.
+                </p>
+
+                <h3>🧠 A Model Per Employee</h3>
+                <p>
+                  Not every job needs your most expensive model. In Deskforce you choose a model for each employee:
+                </p>
+                <ul>
+                  <li>A strong model for the <strong>CEO and reviewers</strong>, who plan and check the work</li>
+                  <li>A cheaper, faster model for <strong>junior staff</strong> doing simpler tasks</li>
+                  <li>Any provider: <strong>OpenAI, Claude, Gemini, Grok</strong>, or a <strong>local model through
+                      Ollama</strong></li>
+                </ul>
+                <p>
+                  With Ollama, nothing leaves your machine at all. And if you don't have a key yet, providers answer
+                  with mock text so you can try the interface first.
+                </p>
+
+                <h3>💰 Costs You Can Control</h3>
+                <p>
+                  An agent stuck in a loop can burn through a budget before you notice. Deskforce has several checks
+                  against that:
+                </p>
+                <ul>
+                  <li>✅ <strong>Plan approval</strong>: you see the estimated cost before anything is spent</li>
+                  <li>🎯 <strong>A budget per task</strong>, plus a <strong>monthly cap</strong></li>
+                  <li>📊 <strong>Spending broken down</strong> by day, employee and model</li>
+                  <li>⚖️ <strong>Side-by-side model comparisons</strong>, to find the cheapest model that's still good
+                    enough</li>
+                </ul>
+
+                <h3>↩️ Undo Anything</h3>
+                <p>
+                  Because every task is a git commit in the employee's name, you always know who changed what. If you
+                  don't like a change, <strong>revert it with one click</strong>. You can give agents real work without
+                  worrying that one bad step will ruin the whole project.
+                </p>
+
+                <h3>💬 Works From Slack</h3>
+                <p>
+                  You don't have to sit in front of the app. You can ask for work, check progress, and approve plans
+                  from a <strong>Slack message</strong>, without exposing your computer to the internet.
+                </p>
+
+                <h3>🚀 Try It</h3>
+                <p>
+                  Deskforce runs on your own computer, so your files stay with you:
+                </p>
+                <ul>
+                  <li><strong>macOS</strong> (Apple Silicon and Intel) and <strong>Windows</strong>: download the
+                    desktop app from the <a href="https://github.com/husseinzayat3/Deskforce/releases/latest"
+                      target="_blank" rel="noopener">Releases page</a> and add your API keys in settings</li>
+                  <li><strong>Linux</strong>: run it with Docker</li>
+                  <li><strong>From source</strong>: clone the repo, run <code>npm install</code> and <code>npm run
+                      dev</code> (Node.js 22+)</li>
+                </ul>
+                <p>
+                  Start small: hire a few employees, give the CEO a task, and watch what happens. The <a
+                    href="https://husseinzayat3.github.io/Deskforce/getting-started" target="_blank"
+                    rel="noopener">getting started guide</a> covers the rest.
+                </p>
+
+                <h3>🛠️ Need a Custom Version?</h3>
+                <p>
+                  Deskforce is free and MIT-licensed, including for commercial use. If you'd like it built around your
+                  company, with your own roles and approval steps, integrations with your tools, private or
+                  self-hosted models, your branding, or a hosted multi-user version, I build custom versions. <a
+                    href="https://husseinzayat3.github.io/Deskforce/custom-builds" target="_blank" rel="noopener">Get in
+                    touch</a> and I'll send you a proposal.
+                </p>
+
+                <p>
+                  The source is on <a href="https://github.com/husseinzayat3/Deskforce" target="_blank"
+                    rel="noopener"><strong>GitHub</strong></a>. Stars, issues and pull requests are all welcome. ⭐
+                </p>
+
+                <br>
+                <p><strong>Tags:</strong> #AI #AIAgents #MultiAgent #LLM #OpenSource #Ollama #DeveloperTools
+                  #Deskforce</p>
               </div>
             </div>
           </div>
