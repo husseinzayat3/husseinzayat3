@@ -387,7 +387,7 @@ if (btn) btn.addEventListener('click', () => setTheme(root.getAttribute('data-th
           "text": "My open-source office of AI agents, built around your roles, tools and models: setup, integrations or a hosted team edition."
         },
         "cta": {
-          "text": "Not sure which fits? A free 15-minute call is the quickest way to find out.",
+          "text": "Not sure which fits? A free 30-minute call is the quickest way to find out.",
           "button": "Book a free call"
         }
       },
@@ -449,7 +449,7 @@ if (btn) btn.addEventListener('click', () => setTheme(root.getAttribute('data-th
       },
       "booking": {
         "title": "Book a Meeting",
-        "text": "Schedule a free 15-minute consultation to discuss your project or clarify your needs.",
+        "text": "Schedule a free 30-minute consultation to discuss your project or clarify your needs.",
         "button": "Schedule a Date"
       },
       "blog": {
@@ -539,7 +539,7 @@ if (btn) btn.addEventListener('click', () => setTheme(root.getAttribute('data-th
           "text": "Il mio ufficio open source di agenti AI, costruito su ruoli, strumenti e modelli del tuo team: configurazione, integrazioni o una versione hosted."
         },
         "cta": {
-          "text": "Non sai quale fa per te? Una call gratuita di 15 minuti è il modo più rapido per capirlo.",
+          "text": "Non sai quale fa per te? Una call gratuita di 30 minuti è il modo più rapido per capirlo.",
           "button": "Prenota una call gratuita"
         }
       },
@@ -601,7 +601,7 @@ if (btn) btn.addEventListener('click', () => setTheme(root.getAttribute('data-th
       },
       "booking": {
         "title": "Prenota una Call",
-        "text": "Prenota una consulenza gratuita di 15 minuti per discutere del tuo progetto o chiarire le tue esigenze.",
+        "text": "Prenota una consulenza gratuita di 30 minuti per discutere del tuo progetto o chiarire le tue esigenze.",
         "button": "Prenota una data"
       },
       "blog": {

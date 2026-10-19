@@ -4,7 +4,7 @@
 
 I design and build reliable backends on .NET and Azure, the AI features and agents that run on them, and I lead the teams that ship them. Technical lead and backend consultant for CNH Industrial & Iveco and HEABC (Canada); registered engineer, M.Sc. Software Engineering at Politecnico di Torino.
 
-**Available part-time** for projects, assessments and advisory work · remote, with travel for kick-offs · [book a free 15-minute call](https://calendly.com/husseinzayat10)
+**Available part-time** for projects, assessments and advisory work · remote, with travel for kick-offs · [book a free 30-minute call](https://calendly.com/husseinzayat10)
 
 ---
 
